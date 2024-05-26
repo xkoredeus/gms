@@ -133,7 +133,11 @@ a.header-tel {
   min-width: 32px;
   background-color: $white;
   border-radius: 50%;
-  display: block;
+  display: none;
+
+  @include r($breakpoint-3) {
+    display: block;
+  }
 
 
   &.active {
