@@ -1,0 +1,23 @@
+input {
+  border: none;
+  outline: none;
+  box-shadow: unset;
+  background: none;
+}
+
+.form-input {
+  font-size: 14px;
+  color: $dark;
+  @include font-regular;
+  background-color: $lightGray;
+  padding: 23px 25px;
+  border-radius: 54px;
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &:focus {
+    background-color: #ebe5e5;
+  }
+}

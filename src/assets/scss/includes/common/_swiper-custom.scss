@@ -1,0 +1,162 @@
+.slider-wrapper {
+  position: relative;
+}
+
+.swiper {
+  &-button {
+    &-prev,
+    &-next {
+      &::after {
+        display: none;
+      }
+
+      svg {
+        stroke: $white;
+        @include ease;
+      }
+
+      &:hover {
+        svg {
+          stroke: $primary;
+        }
+      }
+
+      &.swiper-button-disabled {
+        opacity: 1;
+      }
+    }
+  }
+}
+//
+//.swiper-pagination.swiper-pagination-bullets {
+//  bottom: -30px;
+//
+//  @include r($breakpoint-1) {
+//    bottom: -25px;
+//  }
+//}
+
+.swiper-nav {
+  z-index: 1;
+
+  button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: $dark;
+
+    @include flex-center;
+    @include ease-long;
+    padding: 0;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $darkGray;
+    }
+
+    &:first-child {
+      right: calc(100% - 25px);
+    }
+
+    &:last-child {
+      left: calc(100% - 25px);
+    }
+
+    svg {
+      width: 27px;
+      height: 16px;
+      fill: $green;
+      @include ease-long;
+
+      @include r($breakpoint-3) {
+        width: 25px;
+      }
+    }
+
+    &.swiper-button-disabled {
+      cursor: auto;
+      svg {
+        fill: $gray;
+      }
+    }
+  }
+
+  &--light {
+    button {
+      background-color: $white;
+
+      &:hover {
+        background-color: $lightGray;
+      }
+
+      svg {
+        fill: $dark;
+      }
+
+      &.swiper-button-disabled {
+        svg {
+          fill: $gray;
+        }
+      }
+    }
+  }
+
+  &-relative {
+    display: flex;
+    gap: 5px;
+    button {
+      &:first-child,
+      &:last-child {
+        position: static;
+        transform: none;
+      }
+
+    }
+  }
+}
+
+//.swiper-scrollbar {
+//  position: relative;
+//  width: 100%;
+//  height: 3px;
+//  background: transparent;
+//  border-radius: 5px;
+//  overflow: hidden;
+//
+//  &::before {
+//    position: absolute;
+//    content: '';
+//    left: 0;
+//    bottom: 0;
+//    height: 1px;
+//    width: 100%;
+//    background-color: #9B9B9B;
+//  }
+//
+//  &:hover {
+//    .swiper-scrollbar-drag {
+//      transform: scaleX(1);
+//    }
+//  }
+//}
+//.swiper-scrollbar-drag {
+//  background: #3E3E3E;
+//  cursor: pointer;
+//  transform-origin: bottom;
+//  @include ease-long;
+//  border-radius: 5px;
+//  z-index: 1;
+//}
+//
+//.swiper-scrollbar--white {
+//  &::before {
+//    background: #FEFEFE;
+//  }
+//
+//  .swiper-scrollbar-drag {
+//    background: #F7F7F7;
+//  }
+//}

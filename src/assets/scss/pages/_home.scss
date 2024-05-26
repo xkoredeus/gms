@@ -1,0 +1,784 @@
+.offer {
+  padding-top: 0;
+}
+
+.offer-in {
+  position: relative;
+  min-height: 465px;
+  background-color: $green;
+  display: flex;
+
+  width: calc(100% + 60px);
+  padding-left: 30px;
+  padding-right: 30px;
+  left: -30px;
+  overflow: hidden;
+
+
+  @include r($breakpoint-3) {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    left: auto;
+  }
+
+}
+
+.offer-title {
+  font-size: 36px;
+  text-transform: uppercase;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include r($breakpoint-3) {
+    font-size: 26px;
+  }
+}
+
+.offer-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 36px;
+  padding-bottom: 36px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 182px auto;
+    grid-gap: 22px;
+
+    @include r($breakpoint-2) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      margin-top: 30px;
+      gap: 30px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    @include r($breakpoint-2) {
+      gap: 20px;
+    }
+
+    .button {
+      font-size: 12px;
+
+      @include r($breakpoint-3) {
+        width: 100%;
+        max-width: 182px;
+      }
+    }
+  }
+
+  &__description {
+    padding: 16px 21px;
+    border: 1px solid $white;
+    @include card-lg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.card-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.task {
+  position: relative;
+  @include card-lg;
+  padding: 25px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: $bg-gray;
+
+  &--big {
+    background-color: $green;
+
+    .task__picture {
+      top: 25px;
+      right: 54px;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    right: 15px;
+    top: 17px;
+  }
+
+  &__number {
+    @include title-h2;
+    @include font-semi;
+  }
+}
+
+.ready-flag {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.25);
+  background: $white;
+  border-radius: 50%;
+  border: 1px solid #D9D9D9;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(50% 50% at 50% 50%, #D2FF7B 0%, #A1DE2F 100%);
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+  }
+}
+.offer-cards {
+  position: absolute;
+  display: flex;
+  gap: 22px;
+  width: 540px;
+  transform-origin: left top;
+  transform: scale(0.75);
+  top: -65px;
+
+  .button {
+    &:hover {
+      background-color: $green;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+}
+.offer-cards-left,
+.offer-cards-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 22px;
+}
+
+.offer-cards-right {
+  margin-bottom: -110px;
+}
+
+.offer-left-top-card {
+  border-radius: 22px;
+  position: relative;
+  height: 154px;
+  background-color: $white;
+  overflow: hidden;
+  padding-bottom: 30px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: -17px;
+    width: 251px;
+    height: 184px;
+    transform: translateX(-50%);
+  }
+}
+
+.offer-left-bottom-card {
+  padding: 35px 30px;
+  background-color: $white;
+  border-radius: 22px;
+  //margin-bottom: 34px;
+}
+
+.offer-right-top-card {
+  background-color: #000;
+  color: $white;
+  border-radius: 22px;
+  padding: 27px;
+  height: 440px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  overflow: hidden;
+
+  &__title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    &-wrapper {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    span {
+      &:first-child {
+        position: relative;
+        font-size: 20px;
+        text-transform: uppercase;
+        @include font-semi;
+        z-index: 1;
+      }
+      &:nth-child(2) {
+        color: $green;
+        font-size: 50px;
+        text-transform: uppercase;
+        @include font-semi;
+      }
+    }
+  }
+
+  &__logo {
+    width: 92px;
+    height: 26px;
+
+    fill: $green;
+  }
+
+  &__img {
+    position: absolute;
+    max-width: 150px;
+    left: 66px;
+    top: -20px;
+  }
+}
+
+.offer-right-bottom-card {
+  background-color: $white;
+  border-radius: 22px;
+  padding: 27px;
+  padding-top: 42px;
+  height: 250px;
+
+  &__in {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    @include flex-center;
+    background-color: $green;
+  }
+}
+
+
+.label {
+  padding: 20px;
+  border-radius: 30px;
+  @include font-semi;
+  text-transform: uppercase;
+  background-color: $green;
+  display: inline-block;
+
+  @include r($breakpoint-2) {
+    padding: 20px 16px;
+  }
+
+  &--dark {
+    color: $green;
+    background-color: $dark;
+  }
+}
+
+
+.base-title {
+  &__wrapper {
+    position: relative;
+    @include r($breakpoint-3) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+}
+.base-subtitle {
+  position: absolute;
+  bottom: 8px;
+  left: 320px;
+  @include r($breakpoint-3) {
+    position: static;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+.base-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 10px;
+  row-gap: 60px;
+
+  @include r($breakpoint-2) {
+    grid-template-columns: repeat(3, auto);
+    row-gap: 30px;
+  }
+  @include r($breakpoint-3) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.base-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+
+
+  @include r($breakpoint-3) {
+    order: 1;
+
+    &:nth-child(6),
+    &:nth-child(8) {
+      order: 2;
+    }
+  }
+}
+
+.rating {
+  display: inline-flex;
+  gap: 2px;
+  background-color: $bg-gray;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &-1 {
+    span:nth-child(1) ~ span {
+      opacity: 0;
+    }
+  }
+
+  &-2 {
+    span:nth-child(2) ~ span {
+      opacity: 0;
+    }
+  }
+
+  &-3 {
+    span:nth-child(3) ~ span {
+      opacity: 0;
+    }
+  }
+
+  &-4 {
+    span:nth-child(4) ~ span {
+      opacity: 0;
+    }
+  }
+
+  &-5 {
+    span:nth-child(5) ~ span {
+      opacity: 0;
+    }
+  }
+
+  span {
+    width: 18px;
+    height: 18px;
+    @include flex-center;
+    border-radius: 50%;
+  }
+}
+
+.spec-section {
+  position: relative;
+  padding-top: 20px;
+}
+
+.spec-nav {
+  display: none;
+  @include r($breakpoint-2) {
+    display: flex;
+  }
+}
+
+.spec-picture {
+  position: absolute;
+  right: 30px;
+  top: -30px;
+
+  @include r($breakpoint-2) {
+    width: 130px;
+    height: 130px;
+    top: 20px;
+    z-index: 2;
+    right: 0;
+  }
+
+  @include r($breakpoint-3) {
+    top: 70px;
+  }
+}
+
+.spec-row__wrapper {
+  @include r($breakpoint-2) {
+    overflow: hidden;
+  }
+}
+
+.spec {
+  padding: 27px;
+  background-color: $white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.spec-char {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+  width: 100%;
+
+  &__item {
+    div:first-child {
+      @include font-semi;
+    }
+  }
+}
+
+.pres-section {
+  .container {
+    position: relative;
+  }
+}
+.pres-image {
+  position: absolute;
+  right: -60px;
+  top: 60%;
+  transform: translateY(-50%);
+
+  @include r($breakpoint-2) {
+    bottom: 20px;
+    top: auto;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.pres-form {
+  max-width: 304px;
+
+  @include r($breakpoint-2) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+  }
+}
+
+.works-wrapper {
+  @include r($breakpoint-2) {
+    margin-bottom: 0;
+  }
+}
+
+.works {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+
+  &__picture {
+    align-self: flex-end;
+    @include r($breakpoint-2) {
+      max-width: 149px;
+    }
+  }
+}
+.works-card {
+  position: relative;
+  background-color: $white;
+  height: 100%;
+  @include font-semi;
+  text-transform: uppercase;
+  @include title-h3;
+  padding: 28px 10px 25px 25px;
+
+  .button {
+    position: absolute;
+    bottom: calc(100% - 26px);
+    right: 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  span {
+    position: relative;
+  }
+}
+
+
+.rent {
+  @include r($breakpoint-3) {
+    padding-bottom: 100px;
+  }
+}
+.rent-info {
+  margin-bottom: 130px;
+
+  @include r($breakpoint-2) {
+    margin-bottom: 0;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.rocket {
+  min-height: 428px;
+  @include r($breakpoint-2) {
+    min-height: unset;
+    padding-bottom: 110px;
+  }
+  .container {
+    position: relative;
+  }
+}
+
+.rocket-picture {
+  position: absolute;
+  right: -140px;
+  top: -350px;
+
+  @include r($breakpoint-2) {
+    width: 300px;
+    right: 0;
+    top: -150px;
+  }
+}
+
+.rocket-title {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+
+  @include r($breakpoint-3) {
+    position: static;
+  }
+
+  &__big {
+    position: relative;
+    font-size: 120px;
+    color: $white;
+    bottom: -15px;
+    left: -110px;
+
+    @include r($breakpoint-3) {
+      font-size: 50px;
+      bottom: -5px;
+      left: 10px;
+    }
+  }
+
+  .button {
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 110px;
+
+    @include r($breakpoint-3) {
+      right: 0;
+    }
+  }
+}
+
+.test {
+  position: relative;
+  min-height: 260px;
+  height: 100%;
+
+  &--main {
+    min-height: 240px;
+
+    &-wrapper {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+  }
+
+  &__in {
+    position: relative;
+    height: 100%;
+
+    .button {
+      position: absolute;
+      right: 0;
+      bottom: -60px;
+
+      @include r($breakpoint-3) {
+        bottom: -74px;
+      }
+    }
+  }
+}
+
+.reviews-slider {
+  overflow: hidden;
+  margin-bottom: 90px;
+
+  .swiper-slide {
+    height: auto;
+  }
+}
+
+.review {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__text {
+    flex-grow: 1;
+  }
+
+  &__info {
+    padding: 16px 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &-picture {
+      width: 61px;
+      height: 61px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
+
+.trust-wrapper {
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+
+    @include r($breakpoint-1) {
+      position: relative;
+      width: 1446px;
+      height: 126px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.faq .container {
+  position: relative;
+}
+
+.faq-image {
+  position: absolute;
+  right: 0;
+  top: -125px;
+
+  @include r($breakpoint-2) {
+    width: 120px;
+    height: 120px;
+    top: -63px;
+  }
+}
+
+.faq-card {
+  position: relative;
+  height: 100%;
+
+  &__wrapper {
+    @include r($breakpoint-2) {
+      padding-top: 20px;
+    }
+  }
+  .title-h3 {
+    width: calc(100% + 15px);
+    min-height: 70px;
+
+    @include r($breakpoint-2) {
+      width: 100%;
+      min-height: unset;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.faq-button {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  background-color: $dark;
+  @include flex-center;
+  border-radius: 50%;
+
+  &.active {
+    background-color: $green;
+
+    svg {
+      transform: scaleY(-1);
+      stroke: $dark;
+    }
+  }
+
+  svg {
+    width: 18px;
+    height: 9px;
+    stroke: $green;
+    @include ease;
+  }
+}
+
+.faq-text {
+  @include r($breakpoint-2) {
+    display: none;
+    margin-top: 16px;
+  }
+}

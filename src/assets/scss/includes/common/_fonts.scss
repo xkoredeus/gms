@@ -1,0 +1,21 @@
+$font-regular: 400;
+$font-medium: 500;
+$font-semi: 600;
+$font-bold: 700;
+$font-extrabold: 800;
+$font-black: 900;
+
+.font-regular { font-weight: $font-regular; }
+.font-medium { font-weight: $font-medium; }
+.font-semi { font-weight: $font-semi; }
+.font-bold { font-weight: $font-bold; }
+.font-extrabold { font-weight: $font-extrabold; }
+.font-black { font-weight: $font-black; }
+
+@mixin font-regular { font-weight: $font-regular; }
+@mixin font-medium { font-weight: $font-medium; }
+@mixin font-semi { font-weight: $font-semi; }
+@mixin font-bold { font-weight: $font-bold; }
+@mixin font-extrabold { font-weight: $font-extrabold; }
+@mixin font-black { font-weight: $font-black; }
+

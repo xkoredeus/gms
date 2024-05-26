@@ -1,0 +1,40 @@
+@mixin section-pd-1 {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @include r($breakpoint-2) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@mixin section-pd-2 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @include r($breakpoint-2) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.p27 {
+  padding: 27px;
+}
+
+.p25 {
+  padding: 25px;
+}
+
+.bg-green {
+  background-color: $green;
+}
+.bg-gray {
+  background-color: $bg-gray;
+}
+.bg-white {
+  background-color: $white;
+}
+
+.section-pd-1 { @include section-pd-1; }
+
+.section-pd-2 { @include section-pd-2; }

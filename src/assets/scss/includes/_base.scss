@@ -1,0 +1,123 @@
+@import "mixins";
+@import "fonts";
+@import "common/breakpoints";
+@import "common/fonts";
+@import "common/colors";
+@import "common/one-classes";
+@import "common/selections";
+@import "common/states";
+@import "common/swiper-custom";
+@import "common/inputs";
+@import "common/checkbox";
+@import "common/titles";
+@import "common/buttons";
+@import "common/popup";
+@import "common/sections";
+
+html, body {
+  position: relative;
+  font-family: 'Golos Text', Roboto, sans-serif;
+  @include text3;
+  @include font-regular;
+  line-height: 1.2;
+  color: $dark;
+  background-color: $bg-gray;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+
+  //@include r($breakpoint-1) {
+  //  font-size: 14px;
+  //}
+
+  @include scroll;
+
+  &.is-loading {
+    overflow: hidden;
+
+    @include rmin($breakpoint-2) {
+      padding-right: 15px;
+    }
+  }
+}
+
+.layout {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+
+  &__in {
+    flex-grow: 1;
+    width: 100%;
+    padding-top: 170px;
+
+    @include r($breakpoint-2) {
+      padding-top: 140px;
+    }
+
+    @include r($breakpoint-3) {
+      padding-top: 125px;
+    }
+  }
+}
+
+a {
+  color: $dark;
+  @include ease-long;
+
+  &:hover {
+    color: $gray;
+  }
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+/* Custom animation */
+.fancybox-slide--html {
+  padding: 0;
+}
+.fancybox-fx-slide-in-in.fancybox-slide--next,
+.fancybox-fx-slide-in-in.fancybox-slide--previous {
+  transform: translateX(100%);
+}
+
+.fancybox-fx-slide-in-in.fancybox-slide--current {
+  transform: translateX(0);
+}
+
+.list {
+  margin-left: 0;
+  padding-left: 25px;
+  margin-bottom: 0;
+
+  li {
+    position: relative;
+    list-style-type: none;
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $white;
+      left: -22px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.svg-sprite {
+  position: absolute;
+  bottom: 0;
+}
