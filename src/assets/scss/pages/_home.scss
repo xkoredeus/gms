@@ -636,6 +636,10 @@
 
     &-wrapper {
       padding-bottom: 20px;
+
+      @include r($breakpoint-3) {
+        padding-bottom: 30px;
+      }
     }
   }
 
@@ -778,7 +782,14 @@
 
 .faq-text {
   @include r($breakpoint-2) {
-    display: none;
     margin-top: 16px;
+  }
+}
+
+.faq-list > div:not(:first-child) {
+  @include r($breakpoint-3) {
+    .faq-text {
+      display: none;
+    }
   }
 }

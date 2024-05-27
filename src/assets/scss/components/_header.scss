@@ -48,6 +48,10 @@
       align-items: center;
       gap: 29px;
     }
+
+    @include r(379) {
+      gap: 18px;
+    }
   }
 
   svg {
@@ -202,10 +206,7 @@ a.header-tel {
   }
 
   &__grid {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding: 10% 20px 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -6618,6 +6618,12 @@ a:hover {
   }
 }
 
+@media only screen and (max-width: 379px) {
+  .header-logo__wrapper {
+    gap: 18px;
+  }
+}
+
 .header-logo svg {
   width: 218px;
   height: 40px;
@@ -6803,10 +6809,7 @@ a.header-tel {
 }
 
 .menu__grid {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding: 10% 20px 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7710,6 +7713,12 @@ a.header-tel {
   padding-bottom: 20px;
 }
 
+@media only screen and (max-width: 768px) {
+  .test--main-wrapper {
+    padding-bottom: 30px;
+  }
+}
+
 .test__picture {
   position: absolute;
   right: 30px;
@@ -7882,7 +7891,12 @@ a.header-tel {
 
 @media only screen and (max-width: 992px) {
   .faq-text {
-    display: none;
     margin-top: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .faq-list > div:not(:first-child) .faq-text {
+    display: none;
   }
 }
