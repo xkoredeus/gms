@@ -7388,19 +7388,6 @@ a.header-tel {
   gap: 15px;
 }
 
-@media only screen and (max-width: 768px) {
-  .base-item {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .base-item:nth-child(6), .base-item:nth-child(8) {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-}
-
 .rating {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -7859,16 +7846,8 @@ a.header-tel {
   width: 44px;
   height: 44px;
   background-color: #262626;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 50%;
+  display: none;
 }
 
 .faq-button.active {
@@ -7879,6 +7858,20 @@ a.header-tel {
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1);
   stroke: #262626;
+}
+
+@media only screen and (max-width: 768px) {
+  .faq-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .faq-button svg {

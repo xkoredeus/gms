@@ -366,15 +366,14 @@
   align-items: flex-start;
   gap: 15px;
 
-
-  @include r($breakpoint-3) {
-    order: 1;
-
-    &:nth-child(6),
-    &:nth-child(8) {
-      order: 2;
-    }
-  }
+  //@include r($breakpoint-3) {
+  //  order: 1;
+  //
+  //  &:nth-child(6),
+  //  &:nth-child(8) {
+  //    order: 2;
+  //  }
+  //}
 }
 
 .rating {
@@ -760,8 +759,8 @@
   width: 44px;
   height: 44px;
   background-color: $dark;
-  @include flex-center;
   border-radius: 50%;
+  display: none;
 
   &.active {
     background-color: $green;
@@ -770,6 +769,10 @@
       transform: scaleY(-1);
       stroke: $dark;
     }
+  }
+
+  @include r($breakpoint-3) {
+    @include flex-center;
   }
 
   svg {
