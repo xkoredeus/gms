@@ -105,6 +105,9 @@
 .row-gap-16 {
   row-gap: 16px;
 }
+.row-gap-12 {
+  row-gap: 12px;
+}
 
 .gap-10 {
   gap: 10px;
@@ -131,4 +134,11 @@
 }
 .card-2 {
   padding: 25px;
+}
+
+
+.pt-less-lg-0 {
+  @include r($breakpoint-2) {
+    padding-top: 0 !important;
+  }
 }
