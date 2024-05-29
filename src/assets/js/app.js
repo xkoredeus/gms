@@ -7,7 +7,7 @@ $(() => {
     const reviewsSlider = new Swiper(".js-reviews-slider", {
         speed: 1200,
         // initialSlide: 1,
-        // loop: true,
+        loop: true,
         navigation: {
             nextEl: ".js-reviews-slider-next",
             prevEl: ".js-reviews-slider-prev",
@@ -31,6 +31,16 @@ $(() => {
             // },
         },
     });
+    const selectionsSlider = new Swiper(".js-selections-slider", {
+        speed: 700,
+        slidesPerView: "auto",
+        navigation: {
+            nextEl: ".js-selections-slider-next",
+            prevEl: ".js-selections-slider-prev",
+        },
+        spaceBetween: 8,
+    });
+
 });
 
 // $(() => {
@@ -60,6 +70,23 @@ $(() => {
     $('.js-toggle-question').on('click', function () {
         $(this).toggleClass('active');
         $(this).siblings('.faq-text').slideToggle();
+    });
+});
+
+$(() => {
+    $('input[type=radio][name=connection-type]').on('change', function (e) {
+        if (e.currentTarget.value === 'email') {
+            $('.js-form-email').slideToggle().addClass('active')
+        } else if ($('.js-form-email').hasClass('active')) {
+             $('.js-form-email').slideToggle().val('').removeClass('active');
+        }
+    })
+});
+$(() => {
+    $(".js-select").select2({
+        language: 'ru',
+        minimumResultsForSearch: -1,
+        width: '100%'
     });
 });
 

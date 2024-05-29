@@ -409,11 +409,7 @@
                             </div>
                         </div>
                         <div class="base-item">
-                            <div class="label">Тестировщик</div>
-                            <div>
-                                <div>801 агентство</div>
-                                <div>от 1 500₽/час</div>
-                            </div>
+                            <div class="label">+12</div>
                         </div>
                     </div>
                 
@@ -622,7 +618,7 @@
             <section class="bg-green pres-section section-pd-1">
                 <div class="container">
                     <img class="pres-image" src="assets/img/pres-img.jpg" alt="Pres">
-                    <div class="row row-gap-30 align-items-lg-center">
+                    <div class="row row-gap-30">
                         <div class="col-lg-6">
                             <div class="title-h1 ls03 font-semi upp title-mb-3">
                                 Получите презентацию <br>
@@ -635,36 +631,50 @@
                             <div>и получите презентацию о платформе GMS Expert</div>
                         </div>
                         <div class="col-lg-6">
-                            <form class="pres-form p25 bg-white card-lg">
-                                <div class="font-semi ls03 upp title-mb-3">ВЫБЕРИТЕ СПОСОБ СВЯЗИ:</div>
+                            <div class="pres-form__wrapper">
+                                <form class="pres-form p25 bg-white card-lg">
+                                    <div class="font-semi ls03 upp title-mb-3">ВЫБЕРИТЕ СПОСОБ СВЯЗИ:</div>
             
-                                <div class="d-flex align-items gap-10 title-mb-2">
-                                    <label class="feed-radio">
-                                        <input type="radio" name="connection-type" checked>
-                                        <span class="feed-radio__text">
-                                            <img src="assets/img/ws.png" alt="Ws">
+                                    <div class="d-flex align-items gap-10 title-mb-2">
+                                        <label class="feed-radio">
+                                            <input type="radio" name="connection-type" checked  value="ws">
+                                            <span class="feed-radio__text">
+                                                <img src="assets/img/ws.png" alt="Ws">
+                                            </span>
+                                        </label>
+                                        <label class="feed-radio">
+                                            <input type="radio" name="connection-type" value="tg">
+                                            <span class="feed-radio__text">
+                                                <img src="assets/img/tg.png" alt="Tg">
+                                            </span>
+                                        </label>
+                                        <label class="feed-radio">
+                                            <input class="js-form-toggle" type="radio" name="connection-type" value="email">
+                                            <span class="feed-radio__text">
+                                                <img src="assets/img/em.png" alt="Em">
+                                            </span>
+                                        </label>
+                                    </div>
+            
+                                    <div class="mb-3 d-flex flex-column align-items-start w-100 row-gap-12">
+                                        <input type="text" class="form-input js-tel w-100" placeholder="Введите ваш телефон">
+                                        <input type="email" class="js-form-email form-input w-100" placeholder="Введите вашу почту">
+                                    </div>
+            
+            
+            
+                                    <label class="checkbox title-mb-2">
+                                        <input type="checkbox" checked>
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Я принимаю условия<br> <a href="#" class="link-underline">политики конфиденциальности</a></span>
                                         </span>
                                     </label>
-                                    <label class="feed-radio">
-                                        <input type="radio" name="connection-type">
-                                        <span class="feed-radio__text">
-                                            <img src="assets/img/tg.png" alt="Tg">
-                                        </span>
-                                    </label>
-                                </div>
             
-                                <input type="text" class="form-input js-tel w-100 mb-3" placeholder="Введите ваш телефон">
+                                    <button class="button button-dark w-100 upp">Получить презентацию</button>
+                                </form>
+                            </div>
             
-                                <label class="checkbox title-mb-2">
-                                    <input type="checkbox" checked>
-                                    <span class="checkbox__text">
-                                        <svg><use xlink:href="#check"></use></svg>
-                                        <span>Я принимаю условия<br> <a href="#" class="link-underline">политики конфиденциальности</a></span>
-                                    </span>
-                                </label>
-            
-                                <button class="button button-dark w-100 upp">Получить презентацию</button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -925,14 +935,14 @@
                                                         <span><img src="assets/img/rating.png" alt="star"></span>
                                                     </div>
                                                 </div>
-                                                <div>GMS Expert оказался невероятно полезным для нашей компании.  Мы сэкономили время и усилия благодаря высокой квалификации специалистов, которые были нам предложены. Процесс был эффективным и прозрачным. Рекомендую!</div>
+                                                <div>Как крупной корпорации, нам важно, чтобы работа выполнялась на высоком уровне качества и в строго установленные сроки. Платформа ГМС-Эксперт многократно выручала нас, предоставляя специалистов на временные проекты. Особенно радует, что все вопросы документооборота и отчетности берут на себя, это серьезно экономит нам время и ресурсы.</div>
                                             </div>
                                             <div class="review__info">
-                                                <img class="review__info-picture" src="assets/img/emp-1.png" alt="Review">
+                                                <img class="review__info-picture" src="assets/img/rev-1.jpg" alt="Review">
                 
                                                 <div>
-                                                    <div class="font-semi mb-1">Александр К.</div>
-                                                    <div class="text4 color-gray">Системный аналитик</div>
+                                                    <div class="font-semi mb-1">Сергей</div>
+                                                    <div class="text4 color-gray">директор IT-отдела</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -949,15 +959,14 @@
                                                         <span><img src="assets/img/rating.png" alt="star"></span>
                                                     </div>
                                                 </div>
-                                                <div>GMS Expert превзошел все наши ожидания. Мы получили идеально подходящих кандидатов для наших вакансий, что значительно улучшило нашу команду. Коммуникация с менеджерами сервиса была отличной,
-                                                    <br>а результаты – впечатляющими. Благодарим за отличную работу!</div>
+                                                <div>ГМС-Эксперт идеально подходит для нашего стартапа. Мы были в поиске квалифицированных разработчиков для запуска нового продукта и получили именно тех специалистов, которые нам нужны, избежав долгого процесса найма. Платформа действительно помогает сохранять фокус на развитии бизнеса вместо HR-рутины.</div>
                                             </div>
                                             <div class="review__info">
-                                                <img class="review__info-picture" src="assets/img/emp-2.png" alt="Review">
+                                                <img class="review__info-picture" src="assets/img/rev-2.jpg" alt="Review">
                 
                                                 <div>
-                                                    <div class="font-semi mb-1">Александр К.</div>
-                                                    <div class="text4 color-gray">Специалист по разработке искусственного интеллекта </div>
+                                                    <div class="font-semi mb-1">Мария</div>
+                                                    <div class="text4 color-gray">сооснователь и CTO</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -974,39 +983,14 @@
                                                         <span><img src="assets/img/rating.png" alt="star"></span>
                                                     </div>
                                                 </div>
-                                                <div>GMS Expert помог мне найти идеальную компанию для своих навыков и амбиций. Благодаря персонализированному подходу  и внимательному отбору вакансий, я быстро нашел работу, которая полностью соответствует моим ожиданиям. Процесс был профессиональным
-                                                    <br>и эффективным. Большое <br>спасибо за помощь!</div>
+                                                <div>Как небольшая IT-компания, мы всегда занимались поиском проектов для наших специалистов. С ГМС-Эксперт этот процесс значительно упростился. Платформа не только обеспечивает нас постоянным потоком интересных проектов, но и предлагает удобные и регулярные платежи. Теперь мы можем сосредоточиться на выполнении задач и развитии компании, зная, что наши специалисты всегда при деле.</div>
                                             </div>
                                             <div class="review__info">
                                                 <img class="review__info-picture" src="assets/img/emp-3.png" alt="Review">
                 
                                                 <div>
-                                                    <div class="font-semi mb-1">Александр К.</div>
-                                                    <div class="text4 color-gray">Системный аналитик</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="review">
-                                            <div class="review__text p25 card-lg bg-gray">
-                                                <div class="title-mb-4">
-                                                    <div class="rating rating-4">
-                                                        <span><img src="assets/img/rating.png" alt="star"></span>
-                                                        <span><img src="assets/img/rating.png" alt="star"></span>
-                                                        <span><img src="assets/img/rating.png" alt="star"></span>
-                                                        <span><img src="assets/img/rating.png" alt="star"></span>
-                                                        <span><img src="assets/img/rating.png" alt="star"></span>
-                                                    </div>
-                                                </div>
-                                                <div>GMS Expert оказался невероятно полезным для нашей компании.  Мы сэкономили время и усилия благодаря высокой квалификации специалистов, которые были нам предложены. Процесс был эффективным и прозрачным. Рекомендую!</div>
-                                            </div>
-                                            <div class="review__info">
-                                                <img class="review__info-picture" src="assets/img/emp-1.png" alt="Review">
-                
-                                                <div>
-                                                    <div class="font-semi mb-1">Александр К.</div>
-                                                    <div class="text4 color-gray">Системный аналитик</div>
+                                                    <div class="font-semi mb-1">Игорь</div>
+                                                    <div class="text4 color-gray">главный операционный директор</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1072,7 +1056,6 @@
                                             href="mailto:info@gms-expert.ru" class="link-underline">info@gms-expert.ru</a>,<br>телефону:&nbsp;<span class="wsnw">+7 (495) 150-45-84</span>.</div>
                                 </div>
                             </div>
-            
                         </div>
                         <div class="col-lg-4">
                             <div class="faq-card__wrapper">

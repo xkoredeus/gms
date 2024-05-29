@@ -3,20 +3,6 @@
   position: relative;
   margin-bottom: 0;
 
-  //&--light {
-  //  .checkbox__text {
-  //    color: $white;
-  //
-  //    svg {
-  //      stroke: $white;
-  //    }
-  //
-  //    &::before {
-  //      border-color: $white;
-  //    }
-  //  }
-  //}
-
   &__text {
     position: relative;
     padding-left: calc(20px + 10px);
@@ -87,31 +73,23 @@
 
   &__text {
     display: grid;
-    grid-template-columns: 20px auto;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     position: relative;
-    padding: 20px;
+    padding: 15px 18px;
+    border-radius: 30px;
+    background-color: $tr;
+    @include font-semi;
+    @include text2;
     color: $dark;
-    @include font-regular;
-    font-size: 14px;
     @include ease-long;
-    border: 1px solid $dark;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 
-    svg {
-      width: 20px;
-      height: auto;
-      max-height: 20px;
-      fill: $dark;
-    }
-
-    &:hover {
-      border-color: $light;
-    }
+    //&:hover {
+    //  border-color: $light;
+    //}
 
     &:active, {
       border-color: $gray;
@@ -127,7 +105,7 @@
     cursor: pointer;
 
     &:checked + .radio__text {
-      background-color: $gray;
+      background-color: $white;
     }
   }
 }

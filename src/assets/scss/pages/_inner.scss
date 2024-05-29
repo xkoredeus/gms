@@ -125,3 +125,127 @@
     }
   }
 }
+
+.catalog-select {
+  max-width: 58px;
+  width: 100%;
+}
+
+.catalog-offer {
+  padding-bottom: 57px;
+  @include r($breakpoint-3) {
+    padding-bottom: 45px;
+  }
+
+  &__card {
+    position: relative;
+    width: calc(100% + 47px);
+    padding-left: 34px;
+    left: -30px;
+    overflow: hidden;
+    border-radius: 24px;
+    background-color: $green;
+    min-height: 316px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    position: relative;
+    span:nth-child(2) {
+      position: absolute;
+      left: calc(100% + 22px);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 277px;
+    }
+  }
+}
+
+.catalog-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+  row-gap: 18px;
+  margin-left: 28px;
+
+  @include text4;
+
+  &__item {
+    position: relative;
+
+    &--online {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 11px;
+        height: 11px;
+        background: radial-gradient(50% 50% at 50% 50%, #D2FF7B 0%, #A1DE2F 100%);
+        border: 1px solid $dark;
+        box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+      }
+    }
+
+    img {
+      max-width: 104px;
+      height: auto;
+      border-radius: 22px;
+      overflow: hidden;
+    }
+  }
+}
+
+.selections-button {
+  position: absolute;
+}
+
+.selections-slider-wrapper {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  .slider {
+    position: relative;
+
+    .swiper-slide:last-child {
+      padding-right: 90px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 90px;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background: linear-gradient(90deg, $tr 0%, $green 50%, $green 100%);
+      z-index: 1;
+    }
+  }
+  .swiper-nav {
+
+    button {
+
+      &.swiper-button-disabled {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      svg {
+        fill: $dark;
+      }
+
+      &:last-child {
+        left: auto;
+        right: 0;
+      }
+      &:first-child {
+        left: 0;
+      }
+    }
+  }
+}
