@@ -126,11 +126,6 @@
   }
 }
 
-.catalog-select {
-  max-width: 58px;
-  width: 100%;
-}
-
 .catalog-offer {
   padding-bottom: 57px;
   @include r($breakpoint-3) {
@@ -147,6 +142,20 @@
     background-color: $green;
     min-height: 316px;
 
+
+    @include r($breakpoint-3) {
+      min-height: unset;
+      width: calc(100% + 32px);
+      padding: 40px 15px 20px;
+      left: -16px;
+    }
+
+    @include r($breakpoint-2) {
+      .title-h1 {
+        font-size: 30px;
+      }
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,6 +169,18 @@
       top: 50%;
       transform: translateY(-50%);
       width: 277px;
+
+      @include r($breakpoint-2) {
+        width: 200px;
+        left: calc(100% + 15px);
+        top: auto;
+        transform: none;
+        bottom: 0;
+      }
+
+      @include r(385) {
+        font-size: 10px;
+      }
     }
   }
 }
@@ -171,31 +192,53 @@
   row-gap: 18px;
   margin-left: 28px;
 
+  @include r($breakpoint-3) {
+    margin-left: 0;
+  }
+
   @include text4;
 
   &__item {
     position: relative;
 
     &--online {
-      &::after {
-        content: '';
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        width: 11px;
-        height: 11px;
-        background: radial-gradient(50% 50% at 50% 50%, #D2FF7B 0%, #A1DE2F 100%);
-        border: 1px solid $dark;
-        box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.25);
-        border-radius: 50%;
+      .catalog-cards__picture {
+        &::after {
+          content: '';
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          width: 11px;
+          height: 11px;
+          background: radial-gradient(50% 50% at 50% 50%, #D2FF7B 0%, #A1DE2F 100%);
+          border: 1px solid $dark;
+          box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.25);
+          border-radius: 50%;
+        }
       }
+    }
+  }
+
+  &__picture {
+    position: relative;
+    display: inline-block;
+
+
+    @include r($breakpoint-3) {
+      width: 100%;
     }
 
     img {
+      width: 100%;
       max-width: 104px;
       height: auto;
       border-radius: 22px;
       overflow: hidden;
+
+
+      @include r($breakpoint-3) {
+        max-width: unset;
+      }
     }
   }
 }
@@ -205,25 +248,58 @@
 }
 
 .selections-slider-wrapper {
+  position: relative;
   padding-top: 15px;
   padding-bottom: 15px;
   overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 90px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: linear-gradient(90deg, $tr 0%, $green 50%, $green 100%);
+    z-index: 1;
+
+    @include r($breakpoint-3) {
+      width: 50px;
+    }
+  }
+
+  .swiper-nav {
+    z-index: 2;
+
+    button {
+      z-index: 2;
+
+      @include r($breakpoint-3) {
+        width: 30px;
+        height: 30px;
+
+        svg {
+          width: 18px;
+        }
+      }
+    }
+  }
+
+  @include r($breakpoint-3) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   .slider {
-    position: relative;
+
+    @include r($breakpoint-3) {
+      .radio__text {
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+    }
 
     .swiper-slide:last-child {
       padding-right: 90px;
-    }
-
-    &::after {
-      position: absolute;
-      content: '';
-      width: 90px;
-      height: 100%;
-      right: 0;
-      top: 0;
-      background: linear-gradient(90deg, $tr 0%, $green 50%, $green 100%);
-      z-index: 1;
     }
   }
   .swiper-nav {
@@ -253,13 +329,17 @@
 .catalog-left-col {
   position: relative;
 
+  &__in {
+    position: relative;
+  }
+
   &::before {
     content: '';
     position: absolute;
     width: calc(100% + 410px);
     border-top-right-radius: 20px;
     height: 100%;
-    right: 0;
+    right: 8px;
     top: 0;
     backdrop-filter: blur(20px);
     background-color: $white;
@@ -274,24 +354,115 @@
 }
 
 .filter {
-  position: relative;
   padding: 50px 20px 40px;
 
+  @include r($breakpoint-2) {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 15px;
+    padding-right: 14px;
+    padding-bottom: 170px;
+  }
 
   &__in {
     position: relative;
   }
 }
+.filter-actions {
+  @include r($breakpoint-2) {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 20px 15px;
+    background-color: $white;
+    z-index: 2;
+  }
+
+  &__in {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include r($breakpoint-2) {
+      &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 50px;
+        left: 0;
+        bottom: calc(100% + 20px);
+        background: linear-gradient(0deg, $white 0%, $tr 100%);
+      }
+    }
+  }
+
+  &__reset {
+    position: relative;
+    padding-right: 10px;
+    font-size: 12px;
+
+    &:hover {
+      color: #FF4B17;
+    }
+
+    span:last-child {
+      position: absolute;
+      color: #FF4B17;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+}
+
+.filter-button {
+  color: $white;
+  gap: 10px;
+  @include font-semi;
+  padding: 15px 0;
+  width: 100%;
+  display: none;
+
+  @include r($breakpoint-2) {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    stroke: $green;
+  }
+
+  &__wrapper {
+    background-color: $dark;
+  }
+}
 
 .filter-item {
-  padding-bottom: 30px;
-  margin-bottom: 30px;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
   border-bottom: 1px dashed #E5E5E5;
+  @include r($breakpoint-2) {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
   &__top {
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: space-between;
+
+    @include r($breakpoint-2) {
+      max-width: 350px;
+    }
   }
   &__button {
     width: 22px;
@@ -330,6 +501,11 @@
 
   &__content {
     padding-top: 20px;
+
+    @include r($breakpoint-2) {
+      padding-top: 15px;
+      max-width: 350px;
+    }
   }
 }
 
@@ -376,27 +552,139 @@
   @include scroll-gray;
 }
 
-.filter-actions {
+.catalog-right-col {
+  padding-top: 30px;
+  padding-bottom: 40px;
+
+  .row > div {
+    height: auto;
+  }
+
+  &--first {
+    padding-bottom: 180px;
+
+    @include r($breakpoint-2) {
+      padding-bottom: 90px;
+    }
+  }
+}
+
+
+.item {
+  padding: 27px;
+  border-radius: 22px;
+  background-color: $white;
+  overflow: hidden;
+  height: 100%;
+}
+
+.item-top {
+  position: relative;
+}
+.item-price {
+  position: absolute;
+  right: -3px;
+  top: 0;
+  text-align: right;
+  @include text3;
+
+  div:first-child {
+    @include font-semi;
+  }
+  div:last-child {
+    color: $gray;
+  }
+}
+
+.item-info {
+  @include text3;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 15px;
+  margin-bottom: 30px;
 
-  &__reset {
+  &__position {
     position: relative;
-    padding-right: 10px;
-    font-size: 12px;
+    padding: 6px 17px 6px 0;
+    display: inline-block;
+    @include font-semi;
 
-    &:hover {
-      color: #FF4B17;
-    }
-
-    span:last-child {
+    &::before {
       position: absolute;
-      color: #FF4B17;
+      content: '';
+      width: calc(100% + 27px);
+      height: 100%;
       right: 0;
       top: 50%;
-      transform: translateY(-50%) rotate(45deg);
+      transform: translateY(-50%);
+      border: 2px solid $green;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      border-left: none;
     }
+  }
+}
+
+.item-status {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.catalog-controls {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__bottom {
+    position: relative;
+
+  }
+}
+
+.catalog-select {
+  width: 58px;
+
+  &__wrapper {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+
+    @include r($breakpoint-3) {
+      display: none;
+    }
+  }
+}
+
+.item-cta {
+  position: relative;
+  padding: 25px;
+  background-color: $green;
+  border-radius: 22px;
+  overflow: hidden;
+
+
+  &__picture {
+    position: absolute;
+    max-width: 250px;
+    height: auto;
+    right: -70px;
+    bottom: -10px;
+  }
+
+  &__in {
+    position: relative;
+    z-index: 1;
+  }
+
+  button {
+    margin-top: 70px;
   }
 }

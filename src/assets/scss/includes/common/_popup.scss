@@ -1,9 +1,9 @@
 .popup__wrapper {
-  padding: 48px 25px 25px;
+  padding: 54px 25px 25px;
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
   max-width: 545px;
   width: 100%;
-  border-radius: 0;
+  border-radius: 22px;
 
   //@include r($breakpoint-4) {
   //  padding: 25px 15px;
@@ -57,5 +57,19 @@
 .popup-hide-close-button {
   .fancybox-close-small {
     display: none;
+  }
+}
+
+.fancybox-close-small {
+  background-color: #F4F8F9;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  color: $dark;
+  padding: 8px;
+  @include ease;
+
+  &:hover {
+    background-color: $gray;
   }
 }

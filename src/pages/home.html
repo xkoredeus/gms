@@ -10,8 +10,8 @@
 
                         <div class="offer-text__grid">
                             <div class="offer-text__buttons">
-                                <button class="button button-light">Стать заказчиком</button>
-                                <button class="button button-dark">Стать исполнителем</button>
+                                <button class="button button-light" data-fancybox data-src="#popup-call">Стать заказчиком</button>
+                                <button class="button button-dark" data-fancybox data-src="#popup-call">Стать исполнителем</button>
                             </div>
                             <div class="offer-text__description">
                                 <span><span class="font-semi">Привлекайте специалистов через 1 договор с GMS Expert:</span><br> юридически гарантируем исполнение сторонами обязательств и качество услуг</span>
@@ -52,7 +52,7 @@
                 <div class="row row-gap-16">
                     <div class="col-lg-4">
                         <div class="works-card card-lg">
-                            <button class="button button-green">начать</button>
+                            <button class="button button-green" data-fancybox data-src="#popup-call">начать</button>
                             <span>Регистрация</span>
                         </div>
                     </div>
@@ -146,20 +146,7 @@
     </div>
 </section>
 
-<section class="rocket section-pd-1 bg-green">
-    <div class="container">
-        <img class="rocket-picture" src="{{root}}assets/img/rocket.png" alt="Rocket">
-        <div class="rocket-title">
-            <div class="title-h1 ls03 font-semi upp d-inline">
-                Среднее<br class="d-inline d-md-none"><span class="d-none d-md-inline">&nbsp;</span>время <br>
-                закрытия <br>
-                вакансии
-            </div>
-            <div class="rocket-title__big d-inline font-semi ls03">1&nbsp;ДЕНЬ</div>
-            <button class="button button-dark upp">отправить запрос</button>
-        </div>
-    </div>
-</section>
+{{> rocket }}
 
 <section class="section-pd-1 cv" style="background-image: url('{{root}}assets/img/gray-bg-2.jpg');">
     <div class="container">

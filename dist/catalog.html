@@ -144,8 +144,8 @@
                             <div class="header-nav__wrapper">
                                 <div class="header-nav">
                                     <a href="#" class="header-nav__link">О проекте</a>
-                                    <a href="#" class="header-nav__link">Заказчикам</a>
-                                    <a href="#" class="header-nav__link">Исполнители</a>
+                                    <a href="customers.html" class="header-nav__link">Заказчикам</a>
+                                    <a href="catalog.html" class="header-nav__link">Исполнители</a>
                                 </div>
                             </div>
         
@@ -179,49 +179,61 @@
 
             <section class="catalog-offer">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-7">
+                    <div class="row row-gap-30">
+                        <div class="col-12 col-md-6 col-lg-7">
                             <div class="catalog-offer__card">
                                 <div class="title-wrapper d-flex flex-column align-items-start">
                                     <span class="catalog-offer__title">
                                         <span class="title-h1 font-semi ls03 upp d-inline-block">Каталог</span>
-                                        <span class="text3">В нашей базе более 11450 проверенных <br>
-                                            специалистов от 363 IT-компаний</span>
+                                        <span class="text3">В нашей базе более 11450<br class="d-inline d-lg-none"> проверенных <br class="d-none d-lg-inline">
+                                            специалистов<br class="d-inline d-lg-none"> от&nbsp;363&nbsp;IT-компаний</span>
                                     </span>
                                     <span class="title-h1 font-semi ls03 upp">IT - <span class="color-gray">Специалистов</span></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-sm-10 offset-sm-1 offset-md-0 col-md-6 col-lg-5">
                             <div class="catalog-cards">
                                 <div class="catalog-cards__item catalog-cards__item--online">
-                                    <img class="mb-2" src="assets/img/vac-1.jpg" alt="Vacancy card">
+                                    <div class="catalog-cards__picture">
+                                        <img class="mb-2" src="assets/img/vac-1.jpg" alt="Vacancy card">
+                                    </div>
                                     <div class="upp font-semi mb-1">Анастасия Л.</div>
                                     <div class="color-gray">Руководитель<br> IT проектов</div>
                                 </div>
                                 <div class="catalog-cards__item">
-                                    <img class="mb-2" src="assets/img/vac-2.jpg" alt="Vacancy card">
+                                    <div class="catalog-cards__picture">
+                                        <img class="mb-2" src="assets/img/vac-2.jpg" alt="Vacancy card">
+                                    </div>
                                     <div class="upp font-semi mb-1">Елизавета В.</div>
                                     <div class="color-gray">Маркетолог</div>
                                 </div>
                                 <div class="catalog-cards__item catalog-cards__item--online">
-                                    <img class="mb-2" src="assets/img/vac-3.jpg" alt="Vacancy card">
+                                    <div class="catalog-cards__picture">
+                                        <img class="mb-2" src="assets/img/vac-3.jpg" alt="Vacancy card">
+                                    </div>
                                     <div class="upp font-semi mb-1">Дмитрий З.</div>
                                     <div class="color-gray">Pуководитель поддержки ПО</div>
                                 </div>
             
                                 <div class="catalog-cards__item">
-                                    <img class="mb-2" src="assets/img/vac-4.jpg" alt="Vacancy card">
+                                    <div class="catalog-cards__picture">
+                                        <img class="mb-2" src="assets/img/vac-4.jpg" alt="Vacancy card">
+                                    </div>
                                     <div class="upp font-semi mb-1">Александр К.</div>
                                     <div class="color-gray">Java-разработчик</div>
                                 </div>
                                 <div class="catalog-cards__item">
-                                    <img class="mb-2" src="assets/img/vac-5.jpg" alt="Vacancy card">
+                                    <div class="catalog-cards__picture">
+                                        <img class="mb-2" src="assets/img/vac-5.jpg" alt="Vacancy card">
+                                    </div>
                                     <div class="upp font-semi mb-1">Егор Ф.</div>
                                     <div class="color-gray">PHP-программист</div>
                                 </div>
                                 <div class="catalog-cards__item">
-                                    <img class="mb-2" src="assets/img/vac-6.jpg" alt="Vacancy card">
+                                    <div class="catalog-cards__picture">
+                                        <img class="mb-2" src="assets/img/vac-6.jpg" alt="Vacancy card">
+                                    </div>
                                     <div class="upp font-semi mb-1">Николай С.</div>
                                     <div class="color-gray">Дизайнер</div>
                                 </div>
@@ -230,8 +242,9 @@
                     </div>
                 </div>
             </section>
+            
             <section class="bg-green selections">
-                <div class="container">
+                <form class="container">
                     <div class="slider-wrapper selections-slider-wrapper spacing-2">
                         <div class="slider js-selections-slider">
                             <div class="swiper-wrapper">
@@ -325,453 +338,1188 @@
                             </button>
                         </div>
                     </div>
+                </form>
+            </section>
+            
+            <section class="filter-button__wrapper">
+                <div class="container">
+                    <button class="filter-button" data-src="#filter" data-fancybox>
+                        <svg width="25" height="21"><use xlink:href="#filter-icon"></use></svg>
+                        <span>Фильтр</span>
+                    </button>
+                </div>
+            </section>
+            
+            <section class="cv" style="background-image: url('assets/img/gray-bg-3.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 catalog-left-col">
+                            <div class="catalog-left-col__in">
+            
+                                <form class="filter" id="filter">
+                                    <div class="filter__in">
+                                        <div class="filter-fields">
+                                            <div class="filter-item">
+                                                <div class="filter-item__top">
+                                                    <span class="filter-item__title">Стоимость часа</span>
+                                                    <button class="filter-item__button active js-toggle-filter-item">
+                                                        <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                                    </button>
+                                                </div>
+                                                <div class="filter-item__content">
+                                                    <div class="form-field--range">
+                                                        <span>от</span>
+                                                        <input class="form-field js-range-input" min="0" max="30000" type="number">
+                                                        <span>до</span>
+                                                        <input class="form-field js-range-input" min="0" max="30000" type="number">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <div class="filter-item">
+                                                <div class="filter-item__top">
+                                                    <span class="filter-item__title">Опыт</span>
+                                                    <button class="filter-item__button active js-toggle-filter-item">
+                                                        <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                                    </button>
+                                                </div>
+                                                <div class="filter-item__content">
+                                                    <div class="form-field--range">
+                                                        <span>от</span>
+                                                        <input class="form-field js-range-input" min="0" max="30000" type="number">
+                                                        <span>до</span>
+                                                        <input class="form-field js-range-input" min="0" max="30000" type="number">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <div class="filter-item">
+                                                <div class="filter-item__top">
+                                                    <span class="filter-item__title">Рейтинг</span>
+                                                    <button class="filter-item__button active js-toggle-filter-item">
+                                                        <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                                    </button>
+                                                </div>
+                                                <div class="filter-item__content">
+                                
+                                                    <span class="form-rating ml-lg-2">
+                                                        <input type="radio" name="review-rating-1" id="review-star1-5" value="5">
+                                                        <label for="review-star1-5">
+                                                            <span><img src="assets/img/rating.png" alt="star"></span>
+                                                        </label>
+                                                    
+                                                        <input type="radio" name="review-rating-1" id="review-star1-4" value="4">
+                                                        <label for="review-star1-4">
+                                                            <span><img src="assets/img/rating.png" alt="star"></span>
+                                                        </label>
+                                                    
+                                                        <input type="radio" name="review-rating-1" id="review-star1-3" value="3" checked>
+                                                        <label for="review-star1-3">
+                                                            <span><img src="assets/img/rating.png" alt="star"></span>
+                                                        </label>
+                                                    
+                                                        <input type="radio" name="review-rating-1" id="review-star1-2" value="2">
+                                                        <label for="review-star1-2">
+                                                            <span><img src="assets/img/rating.png" alt="star"></span>
+                                                        </label>
+                                                    
+                                                        <input type="radio" name="review-rating-1" id="review-star1-1" value="1">
+                                                        <label for="review-star1-1">
+                                                            <span><img src="assets/img/rating.png" alt="star"></span>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <div class="filter-item">
+                                                <div class="filter-item__top">
+                                                    <span class="filter-item__title">Специализация</span>
+                                                    <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
+                                                        <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                                    </button>
+                                                </div>
+                                                <div class="filter-item__content">
+                                                    <div class="filter-variants filter-specializations">
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox" checked>
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Vue.js разработчик</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Data scientist</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>DevOps/SRE</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Vue.js разработчик</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Data scientist</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>DevOps/SRE</span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <div class="filter-item">
+                                                <div class="filter-item__top">
+                                                    <span class="filter-item__title">Грейд</span>
+                                                    <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
+                                                        <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                                    </button>
+                                                </div>
+                                                <div class="filter-item__content">
+                                                    <div class="filter-variants">
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox" checked>
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Lead</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Senior</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Middle</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Junior</span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <div class="filter-item">
+                                                <div class="filter-item__top">
+                                                    <span class="filter-item__title">Пол</span>
+                                                    <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
+                                                        <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                                    </button>
+                                                </div>
+                                                <div class="filter-item__content">
+                                                    <div class="filter-variants">
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span class="filter-checkbox__sex">
+                                                                    <span>Мужчина</span>
+                                                                    <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox" checked>
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span class="filter-checkbox__sex">
+                                                                    <span>Женщина</span>
+                                                                    <svg width="24" height="24"><use xlink:href="#female"></use></svg>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <div class="filter-item">
+                                                <div class="filter-item__top">
+                                                    <span class="filter-item__title">Локация</span>
+                                                    <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
+                                                        <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                                    </button>
+                                                </div>
+                                                <div class="filter-item__content">
+                                                    <div class="filter-variants filter-locations">
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Москва</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox" checked>
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Санкт-Петербург</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Самара</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Тюмень</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Краснодар</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Новокузнецк</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Красноярск</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Ярославль</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Кемерово</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Новый Уренгой</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Москва</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Санкт-Петербург</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Самара</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Тюмень</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Краснодар</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Новокузнецк</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Красноярск</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Ярославль</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Кемерово</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Новый Уренгой</span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <div class="filter-item">
+                                                <div class="filter-item__top">
+                                                    <span class="filter-item__title">Формат работы</span>
+                                                    <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
+                                                        <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                                    </button>
+                                                </div>
+                                                <div class="filter-item__content">
+                                                    <div class="filter-variants">
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Удаленно</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Гибрид</span>
+                                                            </span>
+                                                        </label>
+                                                        <label class="checkbox filter-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox__text">
+                                                                <svg><use xlink:href="#check"></use></svg>
+                                                                <span>Офис</span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                        <div class="filter-actions">
+                                            <div class="filter-actions__in">
+                                                <button type="reset" class="filter-actions__reset">
+                                                    <span>Сбросить</span>
+                                                    <span>+</span>
+                                                </button>
+                                
+                                                <button class="button button-green w-100" type="submit">Применить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+            
+            
+                        </div>
+                        <div class="col-lg-9 catalog-right-col catalog-right-col--first">
+                            <div class="row row-gap-16">
+            
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="item-top title-mb-3">
+                                            <div class="mb-2">
+                                
+                                                <div class="rating rating-4">
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="d-flex align-items-center gap-10 mb-2">
+                                                <div class="title-h3 ls03 font-semi">
+                                                    <span>Адам Б,</span>
+                                                    <span class="color-gray">34</span>
+                                                </div>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </div>
+                                
+                                            <div class="color-gray text3">Россия, Ставрополь, UTC+3</div>
+                                
+                                            <div class="item-price">
+                                                <div>3500/час</div>
+                                                <div>НДС не облагается</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-info__position">
+                                                <span>Системный аналитик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Уровень:</span>
+                                                <span>Middle</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Опыт работы:</span>
+                                                <span>3 года</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Специализация:</span>
+                                                <span>Vue.js разработчик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Образование:</span>
+                                                <span>Российский экономический университет имени Г.В. Плеханова, Институт экономики</span>
+                                            </div>
+                                            <div class="item-status">
+                                                <span class="ready-flag"></span>
+                                                <span class="font-semi">Готов приступить сегодня</span>
+                                            </div>
+                                        </div>
+                                
+                                        <button class="button button-green" data-fancybox data-src="#popup-call">Получить резюме</button>
+                                
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="item-top title-mb-3">
+                                            <div class="mb-2">
+                                
+                                                <div class="rating rating-4">
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="d-flex align-items-center gap-10 mb-2">
+                                                <div class="title-h3 ls03 font-semi">
+                                                    <span>Адам Б,</span>
+                                                    <span class="color-gray">34</span>
+                                                </div>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </div>
+                                
+                                            <div class="color-gray text3">Россия, Ставрополь, UTC+3</div>
+                                
+                                            <div class="item-price">
+                                                <div>3500/час</div>
+                                                <div>НДС не облагается</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-info__position">
+                                                <span>Системный аналитик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Уровень:</span>
+                                                <span>Middle</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Опыт работы:</span>
+                                                <span>3 года</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Специализация:</span>
+                                                <span>Vue.js разработчик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Образование:</span>
+                                                <span>Российский экономический университет имени Г.В. Плеханова, Институт экономики</span>
+                                            </div>
+                                            <div class="item-status">
+                                                <span class="ready-flag"></span>
+                                                <span class="font-semi">Готов приступить сегодня</span>
+                                            </div>
+                                        </div>
+                                
+                                        <button class="button button-green" data-fancybox data-src="#popup-call">Получить резюме</button>
+                                
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="item-top title-mb-3">
+                                            <div class="mb-2">
+                                
+                                                <div class="rating rating-4">
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="d-flex align-items-center gap-10 mb-2">
+                                                <div class="title-h3 ls03 font-semi">
+                                                    <span>Адам Б,</span>
+                                                    <span class="color-gray">34</span>
+                                                </div>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </div>
+                                
+                                            <div class="color-gray text3">Россия, Ставрополь, UTC+3</div>
+                                
+                                            <div class="item-price">
+                                                <div>3500/час</div>
+                                                <div>НДС не облагается</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-info__position">
+                                                <span>Системный аналитик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Уровень:</span>
+                                                <span>Middle</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Опыт работы:</span>
+                                                <span>3 года</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Специализация:</span>
+                                                <span>Vue.js разработчик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Образование:</span>
+                                                <span>Российский экономический университет имени Г.В. Плеханова, Институт экономики</span>
+                                            </div>
+                                            <div class="item-status">
+                                                <span class="ready-flag"></span>
+                                                <span class="font-semi">Готов приступить сегодня</span>
+                                            </div>
+                                        </div>
+                                
+                                        <button class="button button-green" data-fancybox data-src="#popup-call">Получить резюме</button>
+                                
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="item-top title-mb-3">
+                                            <div class="mb-2">
+                                
+                                                <div class="rating rating-4">
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="d-flex align-items-center gap-10 mb-2">
+                                                <div class="title-h3 ls03 font-semi">
+                                                    <span>Адам Б,</span>
+                                                    <span class="color-gray">34</span>
+                                                </div>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </div>
+                                
+                                            <div class="color-gray text3">Россия, Ставрополь, UTC+3</div>
+                                
+                                            <div class="item-price">
+                                                <div>3500/час</div>
+                                                <div>НДС не облагается</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-info__position">
+                                                <span>Системный аналитик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Уровень:</span>
+                                                <span>Middle</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Опыт работы:</span>
+                                                <span>3 года</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Специализация:</span>
+                                                <span>Vue.js разработчик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Образование:</span>
+                                                <span>Российский экономический университет имени Г.В. Плеханова, Институт экономики</span>
+                                            </div>
+                                            <div class="item-status">
+                                                <span class="ready-flag"></span>
+                                                <span class="font-semi">Готов приступить сегодня</span>
+                                            </div>
+                                        </div>
+                                
+                                        <button class="button button-green" data-fancybox data-src="#popup-call">Получить резюме</button>
+                                
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="item-top title-mb-3">
+                                            <div class="mb-2">
+                                
+                                                <div class="rating rating-4">
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="d-flex align-items-center gap-10 mb-2">
+                                                <div class="title-h3 ls03 font-semi">
+                                                    <span>Адам Б,</span>
+                                                    <span class="color-gray">34</span>
+                                                </div>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </div>
+                                
+                                            <div class="color-gray text3">Россия, Ставрополь, UTC+3</div>
+                                
+                                            <div class="item-price">
+                                                <div>3500/час</div>
+                                                <div>НДС не облагается</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-info__position">
+                                                <span>Системный аналитик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Уровень:</span>
+                                                <span>Middle</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Опыт работы:</span>
+                                                <span>3 года</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Специализация:</span>
+                                                <span>Vue.js разработчик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Образование:</span>
+                                                <span>Российский экономический университет имени Г.В. Плеханова, Институт экономики</span>
+                                            </div>
+                                            <div class="item-status">
+                                                <span class="ready-flag"></span>
+                                                <span class="font-semi">Готов приступить сегодня</span>
+                                            </div>
+                                        </div>
+                                
+                                        <button class="button button-green" data-fancybox data-src="#popup-call">Получить резюме</button>
+                                
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="item-top title-mb-3">
+                                            <div class="mb-2">
+                                
+                                                <div class="rating rating-4">
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="d-flex align-items-center gap-10 mb-2">
+                                                <div class="title-h3 ls03 font-semi">
+                                                    <span>Адам Б,</span>
+                                                    <span class="color-gray">34</span>
+                                                </div>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </div>
+                                
+                                            <div class="color-gray text3">Россия, Ставрополь, UTC+3</div>
+                                
+                                            <div class="item-price">
+                                                <div>3500/час</div>
+                                                <div>НДС не облагается</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-info__position">
+                                                <span>Системный аналитик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Уровень:</span>
+                                                <span>Middle</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Опыт работы:</span>
+                                                <span>3 года</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Специализация:</span>
+                                                <span>Vue.js разработчик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Образование:</span>
+                                                <span>Российский экономический университет имени Г.В. Плеханова, Институт экономики</span>
+                                            </div>
+                                            <div class="item-status">
+                                                <span class="ready-flag"></span>
+                                                <span class="font-semi">Готов приступить сегодня</span>
+                                            </div>
+                                        </div>
+                                
+                                        <button class="button button-green" data-fancybox data-src="#popup-call">Получить резюме</button>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="rocket section-pd-1 bg-green">
+                <div class="container">
+                    <img class="rocket-picture" src="assets/img/rocket.png" alt="Rocket">
+                    <div class="rocket-title">
+                        <div class="title-h1 ls03 font-semi upp d-inline">
+                            Среднее<br class="d-inline d-md-none"><span class="d-none d-md-inline">&nbsp;</span>время <br>
+                            закрытия <br>
+                            вакансии
+                        </div>
+                        <div class="rocket-title__big d-inline font-semi ls03">1&nbsp;ДЕНЬ</div>
+                        <button class="button button-dark upp" data-fancybox data-src="#popup-call">отправить запрос</button>
+                    </div>
                 </div>
             </section>
             <section class="cv" style="background-image: url('assets/img/gray-bg-3.jpg');">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3 catalog-left-col">
-                            <form class="filter">
-                                <div class="filter__in">
-                                    <div class="filter-item">
-                                        <div class="filter-item__top">
-                                            <span class="filter-item__title">Стоимость часа</span>
-                                            <button class="filter-item__button active js-toggle-filter-item">
-                                                <svg><use xlink:href="#chevron-bottom"></use></svg>
-                                            </button>
-                                        </div>
-                                        <div class="filter-item__content">
-                                            <div class="form-field--range">
-                                                <span>от</span>
-                                                <input class="form-field js-range-input" min="0" max="30000" type="number">
-                                                <span>до</span>
-                                                <input class="form-field js-range-input" min="0" max="30000" type="number">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!---->
-                                    <div class="filter-item">
-                                        <div class="filter-item__top">
-                                            <span class="filter-item__title">Опыт</span>
-                                            <button class="filter-item__button active js-toggle-filter-item">
-                                                <svg><use xlink:href="#chevron-bottom"></use></svg>
-                                            </button>
-                                        </div>
-                                        <div class="filter-item__content">
-                                            <div class="form-field--range">
-                                                <span>от</span>
-                                                <input class="form-field js-range-input" min="0" max="30000" type="number">
-                                                <span>до</span>
-                                                <input class="form-field js-range-input" min="0" max="30000" type="number">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!---->
-                                    <div class="filter-item">
-                                        <div class="filter-item__top">
-                                            <span class="filter-item__title">Рейтинг</span>
-                                            <button class="filter-item__button active js-toggle-filter-item">
-                                                <svg><use xlink:href="#chevron-bottom"></use></svg>
-                                            </button>
-                                        </div>
-                                        <div class="filter-item__content">
+                        <div class="col-lg-3 catalog-left-col"></div>
+                        <div class="col-lg-9 catalog-right-col">
+                            <div class="row row-gap-16 title-mb-35">
             
-                                            <span class="form-rating ml-lg-2">
-                                                <input type="radio" name="review-rating-1" id="review-star1-5" value="5">
-                                                <label for="review-star1-5">
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="item-top title-mb-3">
+                                            <div class="mb-2">
+                                
+                                                <div class="rating rating-4">
                                                     <span><img src="assets/img/rating.png" alt="star"></span>
-                                                </label>
-                                            
-                                                <input type="radio" name="review-rating-1" id="review-star1-4" value="4">
-                                                <label for="review-star1-4">
                                                     <span><img src="assets/img/rating.png" alt="star"></span>
-                                                </label>
-                                            
-                                                <input type="radio" name="review-rating-1" id="review-star1-3" value="3" checked>
-                                                <label for="review-star1-3">
                                                     <span><img src="assets/img/rating.png" alt="star"></span>
-                                                </label>
-                                            
-                                                <input type="radio" name="review-rating-1" id="review-star1-2" value="2">
-                                                <label for="review-star1-2">
                                                     <span><img src="assets/img/rating.png" alt="star"></span>
-                                                </label>
-                                            
-                                                <input type="radio" name="review-rating-1" id="review-star1-1" value="1">
-                                                <label for="review-star1-1">
                                                     <span><img src="assets/img/rating.png" alt="star"></span>
-                                                </label>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!---->
-                                    <div class="filter-item">
-                                        <div class="filter-item__top">
-                                            <span class="filter-item__title">Специализация</span>
-                                            <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
-                                                <svg><use xlink:href="#chevron-bottom"></use></svg>
-                                            </button>
-                                        </div>
-                                        <div class="filter-item__content">
-                                            <div class="filter-variants filter-specializations">
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox" checked>
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Vue.js разработчик</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Data scientist</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>DevOps/SRE</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Vue.js разработчик</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Data scientist</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>DevOps/SRE</span>
-                                                    </span>
-                                                </label>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="d-flex align-items-center gap-10 mb-2">
+                                                <div class="title-h3 ls03 font-semi">
+                                                    <span>Адам Б,</span>
+                                                    <span class="color-gray">34</span>
+                                                </div>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </div>
+                                
+                                            <div class="color-gray text3">Россия, Ставрополь, UTC+3</div>
+                                
+                                            <div class="item-price">
+                                                <div>3500/час</div>
+                                                <div>НДС не облагается</div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!---->
-                                    <div class="filter-item">
-                                        <div class="filter-item__top">
-                                            <span class="filter-item__title">Грейд</span>
-                                            <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
-                                                <svg><use xlink:href="#chevron-bottom"></use></svg>
-                                            </button>
-                                        </div>
-                                        <div class="filter-item__content">
-                                            <div class="filter-variants">
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox" checked>
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Lead</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Senior</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Middle</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Junior</span>
-                                                    </span>
-                                                </label>
+                                        <div class="item-info">
+                                            <div class="item-info__position">
+                                                <span>Системный аналитик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Уровень:</span>
+                                                <span>Middle</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Опыт работы:</span>
+                                                <span>3 года</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Специализация:</span>
+                                                <span>Vue.js разработчик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Образование:</span>
+                                                <span>Российский экономический университет имени Г.В. Плеханова, Институт экономики</span>
+                                            </div>
+                                            <div class="item-status">
+                                                <span class="ready-flag"></span>
+                                                <span class="font-semi">Готов приступить сегодня</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!---->
-                                    <div class="filter-item">
-                                        <div class="filter-item__top">
-                                            <span class="filter-item__title">Пол</span>
-                                            <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
-                                                <svg><use xlink:href="#chevron-bottom"></use></svg>
-                                            </button>
-                                        </div>
-                                        <div class="filter-item__content">
-                                            <div class="filter-variants">
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span class="filter-checkbox__sex">
-                                                            <span>Мужчина</span>
-                                                            <svg width="24" height="24"><use xlink:href="#male"></use></svg>
-                                                        </span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox" checked>
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span class="filter-checkbox__sex">
-                                                            <span>Женщина</span>
-                                                            <svg width="24" height="24"><use xlink:href="#female"></use></svg>
-                                                        </span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!---->
-                                    <div class="filter-item">
-                                        <div class="filter-item__top">
-                                            <span class="filter-item__title">Локация</span>
-                                            <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
-                                                <svg><use xlink:href="#chevron-bottom"></use></svg>
-                                            </button>
-                                        </div>
-                                        <div class="filter-item__content">
-                                            <div class="filter-variants filter-locations">
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Москва</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox" checked>
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Санкт-Петербург</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Самара</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Тюмень</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Краснодар</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Новокузнецк</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Красноярск</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Ярославль</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Кемерово</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Новый Уренгой</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Москва</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Санкт-Петербург</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Самара</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Тюмень</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Краснодар</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Новокузнецк</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Красноярск</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Ярославль</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Кемерово</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Новый Уренгой</span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!---->
-                                    <div class="filter-item">
-                                        <div class="filter-item__top">
-                                            <span class="filter-item__title">Формат работы</span>
-                                            <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
-                                                <svg><use xlink:href="#chevron-bottom"></use></svg>
-                                            </button>
-                                        </div>
-                                        <div class="filter-item__content">
-                                            <div class="filter-variants">
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Удаленно</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Гибрид</span>
-                                                    </span>
-                                                </label>
-                                                <label class="checkbox filter-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="checkbox__text">
-                                                        <svg><use xlink:href="#check"></use></svg>
-                                                        <span>Офис</span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!---->
-                                    <div class="filter-actions">
-                                        <button type="reset" class="filter-actions__reset">
-                                            <span>Сбросить</span>
-                                            <span>+</span>
-                                        </button>
-            
-                                        <button class="button button-green w-100" type="submit">Применить</button>
+                                
+                                        <button class="button button-green" data-fancybox data-src="#popup-call">Получить резюме</button>
+                                
                                     </div>
                                 </div>
-                            </form>
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="item-top title-mb-3">
+                                            <div class="mb-2">
+                                
+                                                <div class="rating rating-4">
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="d-flex align-items-center gap-10 mb-2">
+                                                <div class="title-h3 ls03 font-semi">
+                                                    <span>Адам Б,</span>
+                                                    <span class="color-gray">34</span>
+                                                </div>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </div>
+                                
+                                            <div class="color-gray text3">Россия, Ставрополь, UTC+3</div>
+                                
+                                            <div class="item-price">
+                                                <div>3500/час</div>
+                                                <div>НДС не облагается</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-info__position">
+                                                <span>Системный аналитик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Уровень:</span>
+                                                <span>Middle</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Опыт работы:</span>
+                                                <span>3 года</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Специализация:</span>
+                                                <span>Vue.js разработчик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Образование:</span>
+                                                <span>Российский экономический университет имени Г.В. Плеханова, Институт экономики</span>
+                                            </div>
+                                            <div class="item-status">
+                                                <span class="ready-flag"></span>
+                                                <span class="font-semi">Готов приступить сегодня</span>
+                                            </div>
+                                        </div>
+                                
+                                        <button class="button button-green" data-fancybox data-src="#popup-call">Получить резюме</button>
+                                
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="item-top title-mb-3">
+                                            <div class="mb-2">
+                                
+                                                <div class="rating rating-4">
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="d-flex align-items-center gap-10 mb-2">
+                                                <div class="title-h3 ls03 font-semi">
+                                                    <span>Адам Б,</span>
+                                                    <span class="color-gray">34</span>
+                                                </div>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </div>
+                                
+                                            <div class="color-gray text3">Россия, Ставрополь, UTC+3</div>
+                                
+                                            <div class="item-price">
+                                                <div>3500/час</div>
+                                                <div>НДС не облагается</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-info__position">
+                                                <span>Системный аналитик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Уровень:</span>
+                                                <span>Middle</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Опыт работы:</span>
+                                                <span>3 года</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Специализация:</span>
+                                                <span>Vue.js разработчик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Образование:</span>
+                                                <span>Российский экономический университет имени Г.В. Плеханова, Институт экономики</span>
+                                            </div>
+                                            <div class="item-status">
+                                                <span class="ready-flag"></span>
+                                                <span class="font-semi">Готов приступить сегодня</span>
+                                            </div>
+                                        </div>
+                                
+                                        <button class="button button-green" data-fancybox data-src="#popup-call">Получить резюме</button>
+                                
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="item-top title-mb-3">
+                                            <div class="mb-2">
+                                
+                                                <div class="rating rating-4">
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="d-flex align-items-center gap-10 mb-2">
+                                                <div class="title-h3 ls03 font-semi">
+                                                    <span>Адам Б,</span>
+                                                    <span class="color-gray">34</span>
+                                                </div>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </div>
+                                
+                                            <div class="color-gray text3">Россия, Ставрополь, UTC+3</div>
+                                
+                                            <div class="item-price">
+                                                <div>3500/час</div>
+                                                <div>НДС не облагается</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-info__position">
+                                                <span>Системный аналитик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Уровень:</span>
+                                                <span>Middle</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Опыт работы:</span>
+                                                <span>3 года</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Специализация:</span>
+                                                <span>Vue.js разработчик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Образование:</span>
+                                                <span>Российский экономический университет имени Г.В. Плеханова, Институт экономики</span>
+                                            </div>
+                                            <div class="item-status">
+                                                <span class="ready-flag"></span>
+                                                <span class="font-semi">Готов приступить сегодня</span>
+                                            </div>
+                                        </div>
+                                
+                                        <button class="button button-green" data-fancybox data-src="#popup-call">Получить резюме</button>
+                                
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="item-top title-mb-3">
+                                            <div class="mb-2">
+                                
+                                                <div class="rating rating-4">
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                    <span><img src="assets/img/rating.png" alt="star"></span>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="d-flex align-items-center gap-10 mb-2">
+                                                <div class="title-h3 ls03 font-semi">
+                                                    <span>Адам Б,</span>
+                                                    <span class="color-gray">34</span>
+                                                </div>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </div>
+                                
+                                            <div class="color-gray text3">Россия, Ставрополь, UTC+3</div>
+                                
+                                            <div class="item-price">
+                                                <div>3500/час</div>
+                                                <div>НДС не облагается</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-info__position">
+                                                <span>Системный аналитик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Уровень:</span>
+                                                <span>Middle</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Опыт работы:</span>
+                                                <span>3 года</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Специализация:</span>
+                                                <span>Vue.js разработчик</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-semi">Образование:</span>
+                                                <span>Российский экономический университет имени Г.В. Плеханова, Институт экономики</span>
+                                            </div>
+                                            <div class="item-status">
+                                                <span class="ready-flag"></span>
+                                                <span class="font-semi">Готов приступить сегодня</span>
+                                            </div>
+                                        </div>
+                                
+                                        <button class="button button-green" data-fancybox data-src="#popup-call">Получить резюме</button>
+                                
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item-cta">
+                                        <div class="item-cta__in">
+                                            <div class="rating rating-5 mb-2">
+                                                <span><img src="assets/img/rating-question.png" alt="question"></span>
+                                                <span><img src="assets/img/rating-question.png" alt="question"></span>
+                                                <span><img src="assets/img/rating-question.png" alt="question"></span>
+                                                <span><img src="assets/img/rating-question.png" alt="question"></span>
+                                                <span><img src="assets/img/rating-question.png" alt="question"></span>
+                                            </div>
+                                            <div class="title-mb-3 font-semi ls03 title-h3 upp">
+                                                Нет подходящего<br>
+                                                специалиста?
+                                            </div>
+                                            <div class="lh13">
+                                                За <span class="font-semi">48 часов</span> <br>
+                                                бесплатно подберем <br>
+                                                IT-специалиста в <br>
+                                                закрытом каталоге
+                                            </div>
+                                            <button class="button button-light" data-fancybox data-src="#popup-call">Оставить запрос</button>
+                                        </div>
+                                        <img class="item-cta__picture" src="assets/img/rocket.png" alt="Rocket">
+                                    </div>
+                                </div>
+            
+                            </div>
+                            <div class="catalog-controls">
+                                <button class="button button-green w-100 upp">Показать еще</button>
+            
+                                <div class="catalog-controls__bottom">
+                                    <div class="catalog-select__wrapper">
+                                        <div class="font-semi text3 mr-2">Показывать&nbsp;по</div>
+                                        <div class="catalog-select">
+                                            <select class="js-select">
+                                                <option value="12" selected>12</option>
+                                                <option value="20">16</option>
+                                                <option value="20">26</option>
+                                            </select>
+                                        </div>
+                                    </div>
+            
+                                    <div class="pagination">
+                                        <a href="#" class="button-arrow disabled">
+                                            <svg width="24" height="24">
+                                                <use xlink:href="#arrow-left"></use>
+                                            </svg>
+                                        </a>
+                                    
+                                        <ul class="pagination">
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            <li class="pagination-dots">...</li>
+                                            <li class="page-item"><a class="page-link" href="#">125</a></li>
+                                        </ul>
+                                    
+                                        <a href="#" class="button-arrow">
+                                            <svg width="24" height="24">
+                                                <use xlink:href="#arrow-right"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+            
                         </div>
                     </div>
-                    lolgcard
                 </div>
             </section>
             
-            <div class="d-flex align-items-center">
-                <div class="font-semi text3 mr-2">Показывать по</div>
-                <div class="catalog-select">
-                    <select class="js-select">
-                        <option value="12" selected>12</option>
-                        <option value="20">16</option>
-                        <option value="20">26</option>
-                    </select>
-                </div>
-            </div>
             
             
             
-            <div class="pagination">
-                <a href="#" class="button-arrow disabled">
-                    <svg width="24" height="24">
-                        <use xlink:href="#arrow-left"></use>
-                    </svg>
-                </a>
             
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="pagination-dots">...</li>
-                    <li class="page-item"><a class="page-link" href="#">125</a></li>
-                </ul>
-            
-                <a href="#" class="button-arrow">
-                    <svg width="24" height="24">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </a>
-            </div>
+
         </main>
 
         <footer class="footer section-pd-2 ">
@@ -807,7 +1555,7 @@
         </footer>
         <div id="popup-call" class="popup__wrapper popup__wrapper-small" style="display: none">
             <div class="popup__in">
-                <div class="popup-title title-h4 font-medium">Заполните и мы свяжемся с&nbsp;вами в течение 10 минут</div>
+                <div class="popup-title title-h4 font-medium">Заполните форму и мы свяжемся с&nbsp;Вами в&nbsp;течение&nbsp;10&nbsp;минут</div>
                 <div class="popup__fields">
                     <input type="text" class="form-input" placeholder="Имя фамилия">
                     <input type="tel" class="form-input js-tel" placeholder="Телефон">
@@ -821,7 +1569,7 @@
                     </span>
                 </label>
         
-                <button class="button button-primary">Забронировать</button>
+                <button class="button button-green upp">Отправить</button>
             </div>
         </div>
 
@@ -1326,24 +2074,16 @@
             </defs>
         </symbol>
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        <symbol id="filter-icon" viewBox="0 0 25 21" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_369_2854)">
+                <path d="M24 10.4995H8.64324M3.92865 10.4995H1M3.92865 10.4995C3.92865 9.87441 4.17695 9.27496 4.61893 8.83298C5.0609 8.391 5.66035 8.1427 6.28541 8.1427C6.91046 8.1427 7.50991 8.391 7.95188 8.83298C8.39386 9.27496 8.64216 9.87441 8.64216 10.4995C8.64216 11.1245 8.39386 11.724 7.95188 12.1659C7.50991 12.6079 6.91046 12.8562 6.28541 12.8562C5.66035 12.8562 5.0609 12.6079 4.61893 12.1659C4.17695 11.724 3.92865 11.1245 3.92865 10.4995ZM24 17.6422H16.7859M16.7859 17.6422C16.7859 18.2674 16.537 18.8675 16.095 19.3096C15.6529 19.7516 15.0533 20 14.4281 20C13.8031 20 13.2036 19.7506 12.7616 19.3086C12.3197 18.8667 12.0714 18.2672 12.0714 17.6422M16.7859 17.6422C16.7859 17.017 16.537 16.4179 16.095 15.9758C15.6529 15.5338 15.0533 15.2854 14.4281 15.2854C13.8031 15.2854 13.2036 15.5337 12.7616 15.9757C12.3197 16.4177 12.0714 17.0171 12.0714 17.6422M12.0714 17.6422H1M24 3.35676H20.6432M15.9286 3.35676H1M15.9286 3.35676C15.9286 2.73171 16.1769 2.13226 16.6189 1.69028C17.0609 1.2483 17.6604 1 18.2854 1C18.5949 1 18.9014 1.06096 19.1873 1.1794C19.4732 1.29784 19.733 1.47143 19.9519 1.69028C20.1707 1.90912 20.3443 2.16893 20.4628 2.45486C20.5812 2.7408 20.6422 3.04726 20.6422 3.35676C20.6422 3.66625 20.5812 3.97271 20.4628 4.25865C20.3443 4.54458 20.1707 4.80439 19.9519 5.02323C19.733 5.24208 19.4732 5.41568 19.1873 5.53412C18.9014 5.65255 18.5949 5.71351 18.2854 5.71351C17.6604 5.71351 17.0609 5.46521 16.6189 5.02323C16.1769 4.58126 15.9286 3.98181 15.9286 3.35676Z"  stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_369_2854">
+                    <rect width="25" height="21" fill="white"/>
+                </clipPath>
+            </defs>
+        </symbol>
     
     </svg>
     <script src="assets/js/app.js"></script>

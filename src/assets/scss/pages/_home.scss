@@ -426,6 +426,7 @@
   background-color: $bg-gray;
   border-radius: 12px;
   overflow: hidden;
+  padding: 2px;
 
   &-1 {
     span:nth-child(1) ~ span {
@@ -462,6 +463,7 @@
     height: 18px;
     @include flex-center;
     border-radius: 50%;
+    background-color: $white;
   }
 }
 
