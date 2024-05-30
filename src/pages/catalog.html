@@ -148,8 +148,388 @@
         </div>
     </div>
 </section>
-<section class="cv" style="height: 700px; background-image: url('{{root}}assets/img/gray-bg.jpg');">
+<section class="cv" style="background-image: url('{{root}}assets/img/gray-bg-3.jpg');">
     <div class="container">
+        <div class="row">
+            <div class="col-lg-3 catalog-left-col">
+                <form class="filter">
+                    <div class="filter__in">
+                        <div class="filter-item">
+                            <div class="filter-item__top">
+                                <span class="filter-item__title">Стоимость часа</span>
+                                <button class="filter-item__button active js-toggle-filter-item">
+                                    <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                </button>
+                            </div>
+                            <div class="filter-item__content">
+                                <div class="form-field--range">
+                                    <span>от</span>
+                                    <input class="form-field js-range-input" min="0" max="30000" type="number">
+                                    <span>до</span>
+                                    <input class="form-field js-range-input" min="0" max="30000" type="number">
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="filter-item">
+                            <div class="filter-item__top">
+                                <span class="filter-item__title">Опыт</span>
+                                <button class="filter-item__button active js-toggle-filter-item">
+                                    <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                </button>
+                            </div>
+                            <div class="filter-item__content">
+                                <div class="form-field--range">
+                                    <span>от</span>
+                                    <input class="form-field js-range-input" min="0" max="30000" type="number">
+                                    <span>до</span>
+                                    <input class="form-field js-range-input" min="0" max="30000" type="number">
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="filter-item">
+                            <div class="filter-item__top">
+                                <span class="filter-item__title">Рейтинг</span>
+                                <button class="filter-item__button active js-toggle-filter-item">
+                                    <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                </button>
+                            </div>
+                            <div class="filter-item__content">
+
+                                {{> form-rating }}
+
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="filter-item">
+                            <div class="filter-item__top">
+                                <span class="filter-item__title">Специализация</span>
+                                <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
+                                    <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                </button>
+                            </div>
+                            <div class="filter-item__content">
+                                <div class="filter-variants filter-specializations">
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Vue.js разработчик</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Data scientist</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>DevOps/SRE</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Vue.js разработчик</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Data scientist</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>DevOps/SRE</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="filter-item">
+                            <div class="filter-item__top">
+                                <span class="filter-item__title">Грейд</span>
+                                <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
+                                    <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                </button>
+                            </div>
+                            <div class="filter-item__content">
+                                <div class="filter-variants">
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Lead</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Senior</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Middle</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Junior</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="filter-item">
+                            <div class="filter-item__top">
+                                <span class="filter-item__title">Пол</span>
+                                <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
+                                    <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                </button>
+                            </div>
+                            <div class="filter-item__content">
+                                <div class="filter-variants">
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span class="filter-checkbox__sex">
+                                                <span>Мужчина</span>
+                                                <svg width="24" height="24"><use xlink:href="#male"></use></svg>
+                                            </span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span class="filter-checkbox__sex">
+                                                <span>Женщина</span>
+                                                <svg width="24" height="24"><use xlink:href="#female"></use></svg>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="filter-item">
+                            <div class="filter-item__top">
+                                <span class="filter-item__title">Локация</span>
+                                <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
+                                    <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                </button>
+                            </div>
+                            <div class="filter-item__content">
+                                <div class="filter-variants filter-locations">
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Москва</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Санкт-Петербург</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Самара</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Тюмень</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Краснодар</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Новокузнецк</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Красноярск</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Ярославль</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Кемерово</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Новый Уренгой</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Москва</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Санкт-Петербург</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Самара</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Тюмень</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Краснодар</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Новокузнецк</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Красноярск</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Ярославль</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Кемерово</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Новый Уренгой</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="filter-item">
+                            <div class="filter-item__top">
+                                <span class="filter-item__title">Формат работы</span>
+                                <button class="filter-item__button filter-item__button--small active js-toggle-filter-item">
+                                    <svg><use xlink:href="#chevron-bottom"></use></svg>
+                                </button>
+                            </div>
+                            <div class="filter-item__content">
+                                <div class="filter-variants">
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Удаленно</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Гибрид</span>
+                                        </span>
+                                    </label>
+                                    <label class="checkbox filter-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox__text">
+                                            <svg><use xlink:href="#check"></use></svg>
+                                            <span>Офис</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="filter-actions">
+                            <button type="reset" class="filter-actions__reset">
+                                <span>Сбросить</span>
+                                <span>+</span>
+                            </button>
+
+                            <button class="button button-green w-100" type="submit">Применить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         lolgcard
     </div>
 </section>

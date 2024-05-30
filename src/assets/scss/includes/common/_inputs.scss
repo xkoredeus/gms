@@ -21,6 +21,35 @@ input {
     background-color: #ebe5e5;
   }
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.form-field {
+  padding: 7px 8px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+
+
+  &--range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input {
+      flex-grow: 1;
+      width: 50px;
+    }
+  }
+}
 
 /* select2 */
 .fancybox-active .select2-container--open .select2-dropdown {

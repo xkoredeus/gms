@@ -90,6 +90,22 @@ $(() => {
     });
 });
 
+// filter
+$(() => {
+    $('.js-toggle-filter-item').on('click', function (e) {
+        e.preventDefault();
+        $(this)
+            .toggleClass('active')
+            .parents('.filter-item')
+            .find('.filter-item__content')
+            .slideToggle();
+    });
+
+    // $('.js-range-input').each((idx, elem) => {
+    //     $(elem).prev().text($(elem).val())
+    // });
+});
+
 // containers
 // $(() => {
 //     $(document).on('click', function (e) {
