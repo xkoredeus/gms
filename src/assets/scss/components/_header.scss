@@ -4,10 +4,6 @@
   left: 0;
   top: 0;
   z-index: 1;
-
-  //@include r($breakpoint-3) {
-  //  position: fixed;
-  //}
 }
 
 .is-loading {
@@ -50,7 +46,7 @@
     }
 
     @include r(379) {
-      gap: 18px;
+      gap: 14px;
     }
   }
 
@@ -63,6 +59,11 @@
     @include r($breakpoint-2) {
       width: 120px;
       height: 30px;
+    }
+
+    @include r(379) {
+      width: 100px;
+      height: 20px;
     }
   }
   &__text {
@@ -108,6 +109,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  font-size: 11px;
 
   @include r($breakpoint-2) {
     gap: 10px;
@@ -221,4 +223,57 @@ a.header-tel {
   width: 217px;
   height: 40px;
   margin-bottom: 20px;
+}
+
+.header-dropdown {
+  position: absolute;
+  top: calc(100% - 10px);
+  left: 0;
+  padding-top: 10px;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  @include ease;
+
+  background-color: $white;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+
+  &__wrapper {
+    position: relative;
+    white-space: nowrap;
+    font-size: 11px;
+
+    &.active {
+      .header-dropdown {
+        opacity: 1;
+        visibility: visible;
+      }
+
+    }
+
+    .button {
+      position: relative;
+      font-size: 11px;
+      padding: 4px 7px;
+      z-index: 1;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding: 10px 5px;
+    text-align: center;
+    &:first-child {
+      border-bottom: 1px dashed $gray;
+    }
+
+    &:hover {
+      color: $gray;
+    }
+  }
 }

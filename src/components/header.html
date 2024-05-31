@@ -30,7 +30,17 @@
                         <img src="{{root}}assets/img/phone.png" alt="Phone">
                     </a>
 
-                    <a href="#" class="button button-green">Личный кабинет</a>
+                    <div class="header-dropdown__wrapper">
+                        <button class="button button-green js-toggle-header-dropdown">Личный кабинет</button>
+
+                        <div class="header-dropdown">
+                            <div class="header-dropdown__list">
+                                <button class="header-dropdown__item js-toggle-header-dropdown" data-src="#popup-login">Заказчикам</button>
+                                <button class="header-dropdown__item js-toggle-header-dropdown" data-src="#popup-login">Исполнители</button>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>

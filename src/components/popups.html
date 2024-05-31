@@ -1,19 +1,118 @@
 <div id="popup-call" class="popup__wrapper popup__wrapper-small" style="display: none">
     <div class="popup__in">
-        <div class="popup-title title-h4 font-medium">Заполните форму и мы свяжемся с&nbsp;Вами в&nbsp;течение&nbsp;10&nbsp;минут</div>
-        <div class="popup__fields">
-            <input type="text" class="form-input" placeholder="Имя фамилия">
-            <input type="tel" class="form-input js-tel" placeholder="Телефон">
-            <input type="email" class="form-input" placeholder="Email">
+        <div class="popup-header">
+            <div class="popup-title">введите данные:</div>
         </div>
-        <label class="checkbox">
-            <input type="checkbox" checked>
-            <span class="checkbox__text">
-                <svg><use xlink:href="#check"></use></svg>
-                <span>Принимаю условия <a href="#" class="font-gbold link-underline">политики конфиденциальности</a></span>
-            </span>
-        </label>
 
-        <button class="button button-green upp">Отправить</button>
+        <div class="popup-content">
+            <div class="popup__fields">
+                <input type="text" class="form-input" placeholder="Введите ваше имя">
+                <input type="tel" class="form-input js-tel" placeholder="Введите ваш телефон">
+            </div>
+
+            {{> policy }}
+
+            <button class="button button-dark upp js-toggle-form-success">отправить запрос</button>
+        </div>
+
     </div>
 </div>
+<div id="popup-success" class="popup__wrapper popup__wrapper-success popup__wrapper-small" style="display: none">
+    <div class="popup__in">
+        <div class="popup-header">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="popup-title">Ваш Запрос отправлен</div>
+                <button class="js-close-fancybox"><svg width="26" height="26" fill="#262626"><use xlink:href="#check-circle"></use></svg></button>
+            </div>
+
+        </div>
+
+        <div class="popup-content">
+            <div class="popup-success__in">
+                <div class="popup-feedback__title">
+                    Наш специалист <br>
+                    свяжется с вами <br>
+                    в ближайшее <br>
+                    время
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="popup-login" class="popup__wrapper popup__wrapper-login popup__wrapper-small" style="display: none">
+    <div class="popup__in">
+        <div class="popup-tabs">
+            <div class="popup-tabs-list">
+                <div class="popup-tabs-list__item">
+                    <svg class="popup-tabs-list__decor" width="232" height="67"><use xlink:href="#popup-tabs-decor"></use></svg>
+                    <div class="popup-login__error">
+                        <div class="d-flex align-items-center gap-5">
+                            <span>Ошибка</span>
+                            <svg width="24" height="24"><use xlink:href="#warning"></use></svg>
+                        </div>
+                    </div>
+                    <div class="popup-login__register">
+                        <span>Зарегистрироваться</span>
+                    </div>
+
+                </div>
+                <div class="popup-tabs-list__item">
+                    <svg class="popup-tabs-list__decor" width="232" height="67"><use xlink:href="#popup-tabs-decor"></use></svg>
+                    <span>Войти</span>
+                </div>
+            </div>
+            <div class="popup-tabs-content">
+                <div class="popup-tabs-content__item">
+                    <form class="popup-content">
+                        <div class="popup__fields">
+                            <input type="text" class="form-input" placeholder="Введите ваше имя">
+                            <input type="tel" class="form-input js-tel" placeholder="Введите ваш телефон">
+                            <input type="email" class="form-input" placeholder="Введите вашу почту">
+                            <input type="text" class="form-input" placeholder="Введите ваш ИНН">
+                        </div>
+
+                        {{> policy }}
+
+                        <button class="button button-dark upp">Регистрация</button>
+                    </form>
+                </div>
+                <div class="popup-tabs-content__item">
+                    <div class="popup-content">
+                        <div class="popup-login__content">
+                            <form class="popup-login__item">
+                                <div class="popup-login__in">
+                                    <div class="popup__fields">
+                                        <input type="text" class="form-input" placeholder="логин">
+                                        <input type="password" class="form-input" placeholder="пароль">
+                                    </div>
+
+                                    {{> policy }}
+
+                                    <button class="button button-dark upp js-toggle-login-error">Войти</button>
+                                </div>
+
+                            </form>
+
+                            <div class="popup-feedback__wrapper">
+                                <div class="popup-feedback__in">
+                                    <div class="popup-feedback__title">
+                                        такого профиля
+                                        не существует
+                                    </div>
+                                    <div class="popup-feedback__arrow">
+                                        <svg width="35" height="20"><use xlink:href="#arrow-right"></use></svg>
+                                    </div>
+
+                                    <button class="button button-dark upp js-toggle-signup">Зарегистрироваться</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,35 +1,34 @@
 .popup__wrapper {
-  padding: 54px 25px 25px;
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
   max-width: 545px;
   width: 100%;
   border-radius: 22px;
+  padding: 0;
+  &-small {
+    max-width: 395px;
+  }
+  &-login {
+    overflow: hidden;
+    background-color: $tr;
+    min-height: 520px;
 
-  //@include r($breakpoint-4) {
-  //  padding: 25px 15px;
-  //}
-
-  .fancybox-close-small {
-    background-color: #F4F8F9;
-    top: 10px;
-    right: 10px;
-    border-radius: 50%;
-    color: $dark;
-    padding: 8px;
-    @include ease;
-
-    &:hover {
-      background-color: $gray;
-    }
-
-    @include r($breakpoint-4) {
-      top: 8px;
-      right: 8px;
+    .popup__in {
+      background-color: $white;
+      border-radius: 22px;
     }
   }
+  &-success {
+    max-width: 425px;
 
-  &-small {
-    max-width: 400px;
+    .fancybox-close-small {
+      display: none;
+    }
+  }
+}
+
+.popup-success {
+  &__in {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -37,21 +36,37 @@
   padding-right: 10px;
 }
 
-.popup__in {
+.popup-header {
+  @include font-semi;
+  text-transform: uppercase;
+  padding: 25px 25px;
+  background-color: $green;
+  @include r($breakpoint-4) {
+    padding: 25px 15px;
+  }
+}
+
+.popup-content {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 22px 25px;
+  @include r($breakpoint-4) {
+    padding: 20px 15px;
+  }
 }
 
 .popup__fields {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
 }
 
 .fancybox-is-open .fancybox-bg {
-  background: #8F8F8F;
-  opacity: .7;
+  background: $dark;
+  opacity: .9;
 }
 
 .popup-hide-close-button {
@@ -60,16 +75,161 @@
   }
 }
 
-.fancybox-close-small {
-  background-color: #F4F8F9;
-  top: 8px;
-  right: 8px;
-  border-radius: 50%;
-  color: $dark;
-  padding: 8px;
+.fancybox-slide--html .fancybox-close-small {
+  background-color: $dark;
+  border: 1px solid $gray;
+  width: 26px;
+  height: 26px;
+  top: 20px;
+  right: 20px;
+  border-radius: 5px;
+  color: $green;
+  padding: 2px;
   @include ease;
+  opacity: 1;
 
   &:hover {
-    background-color: $gray;
+    color: $gray;
+  }
+}
+
+.popup-tabs-list {
+  display: grid;
+  grid-template-columns: 217px 1fr;
+
+  &__item {
+    position: relative;
+    padding: 25px 0 25px 25px;
+    @include font-semi;
+    text-transform: uppercase;
+    @include ease;
+
+    @include r(350) {
+      padding-left: 15px;
+    }
+
+    span {
+      position: relative;
+    }
+
+
+    &:not(.active) {
+      cursor: pointer;
+      .popup-tabs-list__decor {
+        opacity: 1;
+      }
+    }
+
+    &:first-child {
+      .popup-tabs-list__decor {
+        right: -19px;
+      }
+    }
+    &:last-child {
+      .popup-tabs-list__decor {
+        transform: scaleX(-1);
+        left: -19px;
+      }
+    }
+
+    &.error {
+      cursor: auto;
+      .popup-tabs-list__decor {
+        fill: #FF756A;
+      }
+      .popup-login {
+        &__error {
+          opacity: 1;
+          visibility: visible;
+        }
+        &__register {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    fill: $green;
+    width: 240px;
+    height: 100%;
+    top: 0;
+    @include ease;
+    opacity: 0;
+  }
+}
+
+.popup-feedback {
+  flex-grow: 1;
+
+  &__title {
+    width: 100%;
+    font-size: 36px;
+    color: #D9D9D9;
+    text-transform: uppercase;
+    @include font-semi;
+    text-align: center;
+
+    @include r($breakpoint-3) {
+      font-size: 20px
+    }
+  }
+
+  &__wrapper {
+    height: 100%;
+  }
+  &__in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    height: 100%;
+  }
+
+  &__arrow {
+    width: 35px;
+    height: 35px;
+    margin-left: 40px;
+    svg {
+      fill: #D9D9D9;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.popup-login {
+  &__content {
+    min-height: 251px;
+    display: flex;
+    align-items: center;
+  }
+  &__in {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__error {
+    font-size: 20px;
+    position: absolute;
+    color: $white;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include ease;
+    visibility: hidden;
+    opacity: 0;
+
+    svg {
+      fill: $white;
+    }
+  }
+  
+  &__register {
+    @include ease;
   }
 }
