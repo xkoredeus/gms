@@ -257,6 +257,7 @@ a.header-tel {
       font-size: 11px;
       padding: 4px 7px;
       z-index: 1;
+      color: $dark;
     }
   }
 
@@ -266,6 +267,7 @@ a.header-tel {
   }
 
   &__item {
+    color: $dark;
     padding: 10px 5px;
     text-align: center;
     &:first-child {

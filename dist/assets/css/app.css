@@ -7909,6 +7909,7 @@ a.header-tel {
   font-size: 11px;
   padding: 4px 7px;
   z-index: 1;
+  color: #262626;
 }
 
 .header-dropdown__list {
@@ -7922,6 +7923,7 @@ a.header-tel {
 }
 
 .header-dropdown__item {
+  color: #262626;
   padding: 10px 5px;
   text-align: center;
 }
