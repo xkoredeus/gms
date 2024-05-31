@@ -93,9 +93,27 @@
   }
 }
 
+.popup-tabs.error {
+  .popup-tabs-list {
+    background-color: #FF756A;
+  }
+}
+
 .popup-tabs-list {
+  position: relative;
   display: grid;
   grid-template-columns: 217px 1fr;
+  background-color: $green;
+  overflow: hidden;
+  @include ease;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 10px;
+    bottom: 0;
+    box-shadow: inset 0px -4px 5px 0px rgba(0,0,0,0.20);
+  }
 
   &__item {
     position: relative;
@@ -103,6 +121,8 @@
     @include font-semi;
     text-transform: uppercase;
     @include ease;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
 
     @include r(350) {
       padding-left: 15px;
@@ -115,28 +135,21 @@
 
     &:not(.active) {
       cursor: pointer;
-      .popup-tabs-list__decor {
-        opacity: 1;
+    }
+    &.active {
+      position: relative;
+      background-color: $white;
+      &:first-child {
+        box-shadow: 5px -2px 5px 0 rgba(0, 0, 0, 0.20);
+      }
+      &:last-child {
+        box-shadow: -5px -2px 5px 0 rgba(0, 0, 0, 0.20);
       }
     }
 
-    &:first-child {
-      .popup-tabs-list__decor {
-        right: -19px;
-      }
-    }
-    &:last-child {
-      .popup-tabs-list__decor {
-        transform: scaleX(-1);
-        left: -19px;
-      }
-    }
 
     &.error {
       cursor: auto;
-      .popup-tabs-list__decor {
-        fill: #FF756A;
-      }
       .popup-login {
         &__error {
           opacity: 1;
@@ -148,16 +161,6 @@
         }
       }
     }
-  }
-
-  &__decor {
-    position: absolute;
-    fill: $green;
-    width: 240px;
-    height: 100%;
-    top: 0;
-    @include ease;
-    opacity: 0;
   }
 }
 

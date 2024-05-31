@@ -7232,9 +7232,28 @@ a.button-dark:hover {
   color: #AFAFAF;
 }
 
+.popup-tabs.error .popup-tabs-list {
+  background-color: #FF756A;
+}
+
 .popup-tabs-list {
+  position: relative;
   display: grid;
   grid-template-columns: 217px 1fr;
+  background-color: #C8FF6A;
+  overflow: hidden;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.popup-tabs-list::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 10px;
+  bottom: 0;
+  -webkit-box-shadow: inset 0px -4px 5px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0px -4px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .popup-tabs-list__item {
@@ -7244,6 +7263,8 @@ a.button-dark:hover {
   text-transform: uppercase;
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
 }
 
 @media only screen and (max-width: 350px) {
@@ -7260,26 +7281,23 @@ a.button-dark:hover {
   cursor: pointer;
 }
 
-.popup-tabs-list__item:not(.active) .popup-tabs-list__decor {
-  opacity: 1;
+.popup-tabs-list__item.active {
+  position: relative;
+  background-color: #fff;
 }
 
-.popup-tabs-list__item:first-child .popup-tabs-list__decor {
-  right: -19px;
+.popup-tabs-list__item.active:first-child {
+  -webkit-box-shadow: 5px -2px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 5px -2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.popup-tabs-list__item:last-child .popup-tabs-list__decor {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-  left: -19px;
+.popup-tabs-list__item.active:last-child {
+  -webkit-box-shadow: -5px -2px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: -5px -2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .popup-tabs-list__item.error {
   cursor: auto;
-}
-
-.popup-tabs-list__item.error .popup-tabs-list__decor {
-  fill: #FF756A;
 }
 
 .popup-tabs-list__item.error .popup-login__error {
@@ -7290,17 +7308,6 @@ a.button-dark:hover {
 .popup-tabs-list__item.error .popup-login__register {
   opacity: 0;
   visibility: hidden;
-}
-
-.popup-tabs-list__decor {
-  position: absolute;
-  fill: #C8FF6A;
-  width: 240px;
-  height: 100%;
-  top: 0;
-  -webkit-transition: .3s all ease;
-  transition: .3s all ease;
-  opacity: 0;
 }
 
 .popup-feedback {
